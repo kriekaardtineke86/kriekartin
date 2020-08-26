@@ -1,0 +1,751 @@
+<!DOCTYPE html><html lang="en-US"><head><meta charset="UTF-8">
+<script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>var __ez=__ez||{};__ez.stms=Date.now();__ez.evt={};__ez.script={};__ez.ck=__ez.ck||{};__ez.template={};__ez.template.isOrig=false;__ez.queue=(function(){var count=0,incr=0,items=[],timeDelayFired=false,hpItems=[],lpItems=[],allowLoad=true;var obj={func:function(name,funcName,parameters,isBlock,blockedBy,deleteWhenComplete,proceedIfError){var self=this;this.name=name;this.funcName=funcName;this.parameters=parameters===null?null:(parameters instanceof Array)?parameters:[parameters];this.isBlock=isBlock;this.blockedBy=blockedBy;this.deleteWhenComplete=deleteWhenComplete;this.isError=false;this.isComplete=false;this.isInitialized=false;this.proceedIfError=proceedIfError;this.isTimeDelay=false;this.process=function(){log("... func = "+name);self.isInitialized=true;self.isComplete=true;log("... func.apply: "+name);var funcs=self.funcName.split('.');var func=null;if(funcs.length>3){}else if(funcs.length===3){func=window[funcs[0]][funcs[1]][funcs[2]];}else if(funcs.length===2){func=window[funcs[0]][funcs[1]];}else{func=window[self.funcName];}
+if(typeof func!=='undefined'&&func!==null){func.apply(null,this.parameters);}
+if(self.deleteWhenComplete===true)delete items[name];if(self.isBlock===true){log("----- F'D: "+self.name);processAll();}}},file:function(name,path,isBlock,blockedBy,async,defer,proceedIfError){var self=this;this.name=name;this.path=path;this.async=async;this.defer=defer;this.isBlock=isBlock;this.blockedBy=blockedBy;this.isInitialized=false;this.isError=false;this.isComplete=false;this.proceedIfError=proceedIfError;this.isTimeDelay=false;this.process=function(){self.isInitialized=true;log("... file = "+name);var scr=document.createElement('script');scr.src=path;if(async===true)scr.async=true;else if(defer===true)scr.defer=true;scr.onerror=function(){log("----- ERR'D: "+self.name);self.isError=true;if(self.isBlock===true){processAll();}};scr.onreadystatechange=scr.onload=function(){var state=scr.readyState;log("----- F'D: "+self.name);if((!state||/loaded|complete/.test(state))){self.isComplete=true;if(self.isBlock===true){processAll();}}};document.getElementsByTagName('head')[0].appendChild(scr);}}};function init(){window.addEventListener("load",function(){setTimeout(function(){timeDelayFired=true;log('TDELAY -----');processAll();},5000);},false);}
+function addFile(name,path,isBlock,blockedBy,async,defer,proceedIfError,priority){var item=new obj.file(name,path,isBlock,blockedBy,async,defer,proceedIfError);if(priority===true){hpItems[name]=item}else{lpItems[name]=item}
+items[name]=item;checkIfBlocked(item);}
+function setallowLoad(settobool){allowLoad=settobool}
+function addFunc(name,func,parameters,isBlock,blockedBy,autoInc,deleteWhenComplete,proceedIfError,priority){if(autoInc===true)name=name+"_"+incr++;var item=new obj.func(name,func,parameters,isBlock,blockedBy,deleteWhenComplete,proceedIfError);if(priority===true){hpItems[name]=item}else{lpItems[name]=item}
+items[name]=item;checkIfBlocked(item);}
+function addTimeDelayFile(name,path){var item=new obj.file(name,path,false,[],false,false,true);item.isTimeDelay=true;log(name+' ... '+' FILE! TDELAY');lpItems[name]=item;items[name]=item;checkIfBlocked(item);}
+function addTimeDelayFunc(name,func,parameters){var item=new obj.func(name,func,parameters,false,[],true,true);item.isTimeDelay=true;log(name+' ... '+' FUNCTION! TDELAY');lpItems[name]=item;items[name]=item;checkIfBlocked(item);}
+function checkIfBlocked(item){if(isBlocked(item)===true||allowLoad==false)return;item.process();}
+function isBlocked(item){if(item.isTimeDelay===true&&timeDelayFired===false){log(item.name+" blocked = TIME DELAY!");return true;}
+if(item.blockedBy instanceof Array){for(var i=0;i<item.blockedBy.length;i++){var block=item.blockedBy[i];if(items.hasOwnProperty(block)===false){log(item.name+" blocked = "+block);return true;}else if(item.proceedIfError===true&&items[block].isError===true){return false;}else if(items[block].isComplete===false){log(item.name+" blocked = "+block);return true;}}}
+return false;}
+function log(msg){var href=window.location.href;var reg=new RegExp('[?&]ezq=([^&#]*)','i');var string=reg.exec(href);var res=string?string[1]:null;if(res==="1")console.debug(msg);}
+function processAll(){count++;if(count>200)return;log("let's go");processItems(hpItems);processItems(lpItems);}
+function processItems(list){for(var i in list){if(list.hasOwnProperty(i)===false)continue;var item=list[i];if(item.isComplete===true||isBlocked(item)||item.isInitialized===true||item.isError===true){if(item.isError===true){log(item.name+': error')}else if(item.isComplete===true){log(item.name+': complete already')}else if(item.isInitialized===true){log(item.name+': initialized already')}}else{item.process();}}}
+init();return{addFile:addFile,addDelayFile:addTimeDelayFile,addFunc:addFunc,addDelayFunc:addTimeDelayFunc,items:items,processAll:processAll,setallowLoad:setallowLoad};})();__ez.evt.add=function(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n()},__ez.evt.remove=function(e,t,n){e.removeEventListener?e.removeEventListener(t,n,!1):e.detachEvent?e.detachEvent("on"+t,n):delete e["on"+t]};__ez.script.add=function(e){var t=document.createElement("script");t.src=e,t.async=!0,t.type="text/javascript",document.getElementsByTagName("head")[0].appendChild(t)};__ez.queue.addFile('/detroitchicago/boise.js', '/detroitchicago/boise.js?gcb=191-1&cb=1', false, [], true, false, true, false);</script>
+<script data-ezscrex="false" data-cfasync="false" data-pagespeed-no-defer type='text/javascript' id='bsaihudashidsadhu'>window.ezogtk="";if(typeof processGoogleToken!=="function"){processGoogleToken=function(a){window.ezogtk=a.newToken;processGoogleToken=undefined;var el=document.getElementById('bsaihudashidsadhu');if(el!==null){el.parentNode.removeChild(document.getElementById('bsaihudashidsadhu'))}
+var eel=document.getElementById('ezintegrator');if(eel!==null){eel.parentNode.removeChild(document.getElementById('ezintegrator'))}}}</script>
+<script src="https://adservice.google.com/adsid/integrator.js?domain=philpad.com" id="ezintegrator"></script>
+<script type="text/javascript">
+	var __banger_pmp_deals=function(){var d={18:{"DealId":18,"Floor":25},17:{"DealId":17,"Floor":160},19:{"DealId":19,"Floor":100}};return[{"SlotName":"/1254144/philpad_com-large-mobile-banner-1","Deals":[d[18]]},{"SlotName":"/1254144/philpad_com-box-4","Deals":[d[18]]},{"SlotName":"/1254144/philpad_com-box-2","Deals":[d[17],d[18],d[19]]},{"SlotName":"/1254144/philpad_com-box-1","Deals":[d[17],d[18],d[19]]},{"SlotName":"/1254144/philpad_com-medrectangle-2","Deals":[d[18],d[19]]},{"SlotName":"/1254144/philpad_com-medrectangle-4","Deals":[d[18]]},{"SlotName":"/1254144/philpad_com-large-billboard-2","Deals":[d[18]]},{"SlotName":"/1254144/philpad_com-box-3","Deals":[d[18]]},{"SlotName":"/1254144/philpad_com-box-4","Deals":[d[18]]}]}();
+</script>
+<script type='text/javascript'>_ebcids=[138231308856,138231308940,138231308949,138231387842,138231421744,138231421759,138231421774,138231421783,138231421789,138231421792,138242067587,138242067590,138242067602,138242067605,138242067608,138242067614,138242229406,138242229415,138242229421,138242229430];</script>
+<script data-ezscrex="false" data-cfasync="false" data-pagespeed-no-defer type='text/javascript'>ezobv=83;</script><script data-ezscrex="false" data-cfasync="false" data-pagespeed-no-defer type='text/javascript'>function ez_isclean(data){if(typeof data==='undefined'){data=document.URL;}
+var re=/(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))(@|%2540|%40)((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))/;var isClean=!re.test(data);return isClean;}
+var ez_queue=new Array();function sort_queue(a,b)
+{if(a.priority<b.priority)return-1;else if(a.priority==b.priority)return 0;else return 1;}
+function execute_ez_queue()
+{ez_queue.sort(sort_queue);for(var i in ez_queue)
+{if(typeof ez_queue[i].method!="undefined")
+{try{ez_queue[i].method.call(null);}
+catch(err){}}}}
+window.ez_ad_units=new Array();window.ezslots=new Array();window.ezsrqt={};function ez_write_tag(d){if(ez_isclean()&&d instanceof Array){if(typeof ezstandalone!=='undefined'&&typeof ezstandalone.selectedPlaceholders!=='undefined'&&ezstandalone.selectedPlaceholders[d[3]]===true){return "1+1";}
+ez_ad_units[ez_ad_units.length]=d;var dve="";if(typeof d[5]!='undefined'&&d[5]>0){dve='_'+d[5];}
+var ezcmd="googletag.cmd.push(function() {var divid = 'div-gpt-ad-"+d[1]+"-"+d[4]+""+dve+"';if(typeof ezlrarn == 'function'){ezlrarn(divid);}googletag.display(divid);var to = 0;if("+d[2]+".getTargeting('ga')[0] == '0'){to = 500;console.log('"+d[2]+" - no google');}if(window.ezDisableInitialLoad==true){setTimeout(function(){googletag.pubads().refresh(["+d[2]+"])},to);}});";return ezcmd;}
+return "1+1";}
+function in_array(needle,haystack){var length=haystack.length;for(var i=0;i<length;i++){if(haystack[i]==needle)return true;}
+return false;}
+var ezrpos=new Array();var ez_current_interval;var ez_current_load=0;</script><script data-cfasync="false" type="text/javascript" data-pagespeed-no-defer src="/porpoiseant/dall3202c.js?cb=191-1" async></script><script data-ezscrex="false" data-cfasync="false" type="text/javascript" data-pagespeed-no-defer>var epbjs=epbjs||{};epbjs.que=epbjs.que||[];epbjs.bidderTimeout=2500;epbjs.useAdj=true;epbjs.SS={"criteo":10050,"oftmedia":10081};epbjs.bidders=['oftmedia','criteo'];epbjs.que.push(function(){epbjs.aliasBidder('appnexus', 'oftmedia');});epbjs.bidderSettings={oftmedia: { bidCpmAdjustment: function(bidCpm) { var adj1 = bidCpm * 0.800000; var adj2 = adj1 * 1.200000; return adj2; }},criteo: { bidCpmAdjustment: function(bidCpm) { var adj1 = bidCpm * 1.000000; var adj2 = adj1 * 1.200000; return adj2; }},};epbjs.gadj=1.200000;
+var __sellerid="90efb4bd060cdbec5f6617ec39674e99";__ez.queue.addFile('/detroitchicago/houston.js', '/detroitchicago/houston.js?gcb=1&cb=3', false, [], true, false, true, false);__ez.queue.addFunc("epbjsRequestAdUnits", "epbjsRequestAdUnits", [[{code: 'div-gpt-ad-philpad_com-large-billboard-2-0', mediaTypes: {banner: { sizes:[[250,250]] }, video: {context:'outstream',playerSize:[[250, 250]]}}, bids: [{bidder: 'criteo', params: { zoneId: '1365493' }},{bidder: 'oftmedia', params:{ placementId: '19594060' }}] },{code: 'div-gpt-ad-philpad_com-box-3-0', mediaTypes: {banner: { sizes:[[250,250]] }, video: {context:'outstream',playerSize:[[250, 250]]}}, bids: [{bidder: 'criteo', params: { zoneId: '1365405' }},{bidder: 'oftmedia', params:{ placementId: '19594014' }}] },{code: 'div-gpt-ad-philpad_com-medrectangle-4-0', mediaTypes: {banner: { sizes:[[468,60]] }, video: {context:'outstream',playerSize:[[468, 60]]}}, bids: [{bidder: 'criteo', params: { zoneId: '1365466' }},{bidder: 'oftmedia', params:{ placementId: '19594051' }}] },{code: 'div-gpt-ad-philpad_com-box-4-0', mediaTypes: {banner: { sizes:[[250,250]] }, video: {context:'outstream',playerSize:[[250, 250]]}}, bids: [{bidder: 'criteo', params: { zoneId: '1365416' }},{bidder: 'oftmedia', params:{ placementId: '19594020' }}] ,sizeMapping: [
+			{
+				minWidth: 250,
+				sizes: [[250,250]]
+			}]},{code: 'div-gpt-ad-philpad_com-box-4-0_1', mediaTypes: {banner: { sizes:[[250,250]] }, video: {context:'outstream',playerSize:[[250, 250]]}}, bids: [{bidder: 'criteo', params: { zoneId: '1365416' }},{bidder: 'oftmedia', params:{ placementId: '19594020' }}] ,sizeMapping: [
+			{
+				minWidth: 250,
+				sizes: [[250,250]]
+			}]},{code: 'div-gpt-ad-philpad_com-medrectangle-2-0', mediaTypes: {banner: { sizes:[[970,90],[728,90]] }, video: {context:'outstream',playerSize:[[970, 90]]}}, bids: [{bidder: 'criteo', params: { zoneId: '1365441' }}] },{code: 'div-gpt-ad-philpad_com-box-2-0', mediaTypes: {banner: { sizes:[[468,60]] }, video: {context:'outstream',playerSize:[[468, 60]]}}, bids: [{bidder: 'criteo', params: { zoneId: '1365400' }},{bidder: 'oftmedia', params:{ placementId: '19594005' }}] },{code: 'div-gpt-ad-philpad_com-box-1-0', mediaTypes: {banner: { sizes:[[300,1050],[300,600]] }, video: {context:'outstream',playerSize:[[300, 1050]]}}, bids: [{bidder: 'criteo', params: { zoneId: '1365390' }},{bidder: 'oftmedia', params:{ placementId: '19593629' }}] },{code: 'div-gpt-ad-philpad_com-large-mobile-banner-1-0', mediaTypes: {banner: { sizes:[[250,250]] }, video: {context:'outstream',playerSize:[[250, 250]]}}, bids: [] }]], false, ['/detroitchicago/houston.js'], true, true, true, true);</script><script type='text/javascript' data-ezscrex="false">var ezorbf = []; </script><script data-ezscrex="false" data-cfasync="false" data-pagespeed-no-defer type='text/javascript'>window.isEZABL=false;window.ezmadspc=300;window.ezoViewCheck=false;</script><script data-ezscrex="false" data-cfasync="false" data-pagespeed-no-defer type='text/javascript'>window.ezDisableInitialLoad=false;</script><script data-ezscrex="false" data-cfasync="false" data-pagespeed-no-defer type='text/javascript'>window.googletag=window.googletag||{};googletag.cmd=googletag.cmd||[];</script><script data-ezscrex="false" data-cfasync="false" data-pagespeed-no-defer type='text/javascript'>(function(){var gads=document.createElement('script');gads.async=true;gads.type='text/javascript';var useSSL='https:'==document.location.protocol;gads.src=(useSSL?'https:':'http:')+
+'//securepubads.g.doubleclick.net/tag/js/gpt.js';var node=document.getElementsByTagName('script')[0];node.parentNode.insertBefore(gads,node);})();</script><script data-ezscrex="false" data-cfasync="false" data-pagespeed-no-defer type='text/javascript'>window.ezogetbrkey = function(s){ var k = 'br1';var k2 = 'eb_br';if(window.ezogtk == ""){k='br1u';k2='eb_bru';}else if(window.ezogtk != "NT"){k='br1t';k2='eb_brt';} s.setTargeting('br1', s.getTargeting(k));s.setTargeting('eb_br', s.getTargeting(k2));};googletag.cmd.push(function() {if(typeof window.isEZABL == 'undefined' || window.isEZABL != true) {ezslot_1 = googletag.defineSlot('/1254144/philpad_com-box-3',[[250,250],[234,60],[728,90],[320,50],[468,60],['fluid']],'div-gpt-ad-philpad_com-box-3-0').addService(googletag.pubads()).setTargeting('iid2','164489').setTargeting('t','134').setTargeting('d','3788').setTargeting('t1','134').setTargeting('pvc','0').setTargeting('ap','1120').setTargeting('sap','1120').setTargeting('a','|6|').setTargeting('as','revenue').setTargeting('plat','1').setTargeting('bra','mod1').setTargeting('ic','1').setTargeting('at','mbf').setTargeting('adr','398').setTargeting('ezosn','1').setTargeting('reft','n').setTargeting('refs','30').setTargeting('ga','2497208').setTargeting('gala','').setTargeting('rid','99998').setTargeting('pt','2').setTargeting('al','1002').setTargeting('compid','0').setTargeting('tap','philpad_com-box-3-164489').setTargeting('eb_br','3ba982fc4238dd4197b1d51b345478dc').setTargeting('eba','1').setTargeting('asau','5741739740').setTargeting('bv','0').setTargeting('bvm','2').setTargeting('bvr','1').setTargeting('shp','1').setCollapseEmptyDiv(false).setTargeting('ft','1').setTargeting('br1','50').setTargeting('br2','28').setTargeting('ezoic','1').setTargeting('nmau','0').setTargeting('mau','0').setTargeting('deal1',[17,19,20,21,22,23,24,25,26,27,28,29,30]);ezslot_1.set('adsense_background_color','FFFFFF').set('adsense_border_color','FFFFFF').set('adsense_channel_ids','6803771486').set('adsense_link_color','858585').set('adsense_text_color','000000').set('adsense_url_color','F0F0F0');ezrpos[1]="1";ezslot_6 = googletag.defineSlot('/1254144/philpad_com-box-2',[[468,60],[300,250],[120,240],[180,150],[234,60],[200,200],[970,90],[970,250],[125,125],[728,90],[320,50],[250,250],[320,100],['fluid']],'div-gpt-ad-philpad_com-box-2-0').addService(googletag.pubads()).setTargeting('iid2','115489').setTargeting('t','134').setTargeting('d','3788').setTargeting('t1','134').setTargeting('pvc','0').setTargeting('ap','1105').setTargeting('sap','1105').setTargeting('a','|5|').setTargeting('as','revenue').setTargeting('plat','1').setTargeting('bra','mod1').setTargeting('ic','1').setTargeting('at','mbf').setTargeting('adr','398').setTargeting('ezosn','6').setTargeting('reft','tf').setTargeting('refs','30').setTargeting('ga','2497208').setTargeting('gala','').setTargeting('rid','99998').setTargeting('pt','1').setTargeting('al','1001').setTargeting('compid','0').setTargeting('tap','philpad_com-box-2-115489').setTargeting('eb_br','8de2c8ca79e8623e3cb37120a35ebaa2').setTargeting('eba','1').setTargeting('asau','5741739740').setTargeting('bv','0').setTargeting('bvm','1').setTargeting('bvr','1').setTargeting('shp','1').setTargeting('acptad','1').setCollapseEmptyDiv(false).setTargeting('ft','1').setTargeting('br1','240').setTargeting('br2','120').setTargeting('ezoic','1').setTargeting('nmau','0').setTargeting('mau','0').setTargeting('deal1',[20,21,22,23,24,25,26,27,28,29,30]);ezslot_6.set('adsense_background_color','FFFFFF').set('adsense_border_color','FFFFFF').set('adsense_channel_ids','6803771486').set('adsense_link_color','20929A').set('adsense_text_color','000000').set('adsense_url_color','F0F0F0');ezrpos[6]="6";ezslot_0 = googletag.defineSlot('/1254144/philpad_com-large-billboard-2',[[250,250],[234,60],[336,280],[320,50],[180,150],[200,200],[125,125],[300,250],[320,100],[120,240],['fluid']],'div-gpt-ad-philpad_com-large-billboard-2-0').addService(googletag.pubads()).setTargeting('iid2','159789').setTargeting('t','134').setTargeting('d','3788').setTargeting('t1','134').setTargeting('pvc','0').setTargeting('ap','1108').setTargeting('sap','1108').setTargeting('a','|1|').setTargeting('as','revenue').setTargeting('plat','1').setTargeting('bra','mod1').setTargeting('ic','1').setTargeting('at','mbf').setTargeting('adr','398').setTargeting('ezosn','0').setTargeting('reft','tf').setTargeting('refs','30').setTargeting('ga','2497208').setTargeting('gala','').setTargeting('rid','99998').setTargeting('pt','0').setTargeting('al','1034').setTargeting('compid','0').setTargeting('tap','philpad_com-large-billboard-2-159789').setTargeting('eb_br','527e52c10635ac8136a4c84094ee49a8').setTargeting('eba','1').setTargeting('asau','5741739740').setTargeting('bv','0').setTargeting('bvm','3').setTargeting('bvr','1').setTargeting('shp','2').setCollapseEmptyDiv(false).setTargeting('ft','1').setTargeting('br1','70').setTargeting('br2','36').setTargeting('ezoic','1').setTargeting('nmau','0').setTargeting('mau','0').setTargeting('deal1',[17,19,20,21,22,23,24,25,26,27,28,29,30]);ezslot_0.set('adsense_background_color','FFFFFF').set('adsense_border_color','FFFFFF').set('adsense_channel_ids','6803771486').set('adsense_link_color','1a0dab').set('adsense_text_color','545454').set('adsense_url_color','006621');ezrpos[0]="0";ezslot_8 = googletag.defineSlot('/1254144/philpad_com-large-mobile-banner-1',[[250,250],[234,60],[728,90],[320,50],[468,60],['fluid']],'div-gpt-ad-philpad_com-large-mobile-banner-1-0').addService(googletag.pubads()).setTargeting('iid2','147489').setTargeting('t','134').setTargeting('d','3788').setTargeting('t1','134').setTargeting('pvc','0').setTargeting('ap','1118').setTargeting('sap','1118').setTargeting('a','|2|').setTargeting('as','revenue').setTargeting('plat','1').setTargeting('bra','mod1').setTargeting('ic','1').setTargeting('at','mbf').setTargeting('adr','398').setTargeting('ezosn','8').setTargeting('reft','tf').setTargeting('refs','30').setTargeting('ga','2497208').setTargeting('gala','').setTargeting('rid','99998').setTargeting('pt','700').setTargeting('al','1700').setTargeting('compid','0').setTargeting('tap','philpad_com-large-mobile-banner-1-147489').setTargeting('eb_br','b355e9227b551c119a30a68852723b62').setTargeting('eba','1').setTargeting('asau','5741739740').setTargeting('bv','0').setTargeting('bvm','1').setTargeting('bvr','2').setTargeting('shp','1').setCollapseEmptyDiv(false).setTargeting('ft','1').setTargeting('br1','90').setTargeting('br2','46').setTargeting('ezoic','1').setTargeting('nmau','0').setTargeting('mau','0').setTargeting('deal1',[17,19,20,21,22,23,24,25,26,27,28,29,30]);ezslot_8.set('adsense_background_color','FFFFFF').set('adsense_border_color','FFFFFF').set('adsense_channel_ids','6803771486').set('adsense_link_color','37a5d7').set('adsense_text_color','000000').set('adsense_url_color','F0F0F0');ezrpos[8]="8";ezslot_7 = googletag.defineSlot('/1254144/philpad_com-box-1',[[300,1050],[320,50],[320,100],[234,60],['fluid']],'div-gpt-ad-philpad_com-box-1-0').addService(googletag.pubads()).setTargeting('iid2','100939').setTargeting('t','134').setTargeting('d','3788').setTargeting('t1','134').setTargeting('pvc','0').setTargeting('ap','1122').setTargeting('sap','1122').setTargeting('a','|254|').setTargeting('as','revenue').setTargeting('plat','1').setTargeting('bra','mod1').setTargeting('ic','1').setTargeting('at','mbf').setTargeting('adr','398').setTargeting('ezosn','7').setTargeting('reft','tf').setTargeting('refs','30').setTargeting('ga','2497208').setTargeting('gala','').setTargeting('rid','99998').setTargeting('pt','0').setTargeting('al','1000').setTargeting('compid','0').setTargeting('tap','philpad_com-box-1-100939').setTargeting('eb_br','9ae587f95e95c876b7b76fd4c72a3838').setTargeting('eba','1').setTargeting('asau','5741739740').setTargeting('bv','0').setTargeting('bvm','2').setTargeting('bvr','1').setTargeting('shp','2').setTargeting('acptad','1').setCollapseEmptyDiv(false).setTargeting('ft','1').setTargeting('br1','180').setTargeting('br2','90').setTargeting('ezoic','1').setTargeting('nmau','0').setTargeting('mau','0').setTargeting('deal1',[20,21,22,23,24,25,26,27,28,29,30]);ezslot_7.set('adsense_background_color','001DAD').set('adsense_border_color','001DAD').set('adsense_channel_ids','6803771486').set('adsense_link_color','FFFFFF').set('adsense_text_color','FFFFFF').set('adsense_url_color','EEFF00');ezrpos[7]="7";ezslot_5 = googletag.defineSlot('/1254144/philpad_com-medrectangle-2',[970,90],'div-gpt-ad-philpad_com-medrectangle-2-0').addService(googletag.pubads()).setTargeting('iid2','123789').setTargeting('t','134').setTargeting('d','3788').setTargeting('t1','134').setTargeting('pvc','0').setTargeting('ap','1125').setTargeting('sap','1125').setTargeting('a','|2|').setTargeting('as','revenue').setTargeting('plat','1').setTargeting('bra','mod1').setTargeting('ic','1').setTargeting('at','mbf').setTargeting('adr','398').setTargeting('ezosn','5').setTargeting('reft','tf').setTargeting('refs','30').setTargeting('ga','2497208').setTargeting('gala','').setTargeting('rid','99998').setTargeting('pt','5').setTargeting('al','1005').setTargeting('compid','0').setTargeting('tap','philpad_com-medrectangle-2-123789').setTargeting('eb_br','a495ce7dbb4cefcd3e0a722048894f41').setTargeting('eba','1').setTargeting('asau','5741739740').setTargeting('bv','0').setTargeting('bvm','1').setTargeting('bvr','1').setTargeting('shp','1').setCollapseEmptyDiv(false).setTargeting('ft','1').setTargeting('br1','100').setTargeting('br2','50').setTargeting('ezoic','1').setTargeting('nmau','0').setTargeting('mau','0').setTargeting('deal1',[17,20,21,22,23,24,25,26,27,28,29,30]);ezslot_5.set('adsense_background_color','FFFFFF').set('adsense_border_color','FFFFFF').set('adsense_channel_ids','6803771486').set('adsense_link_color','37a5d7').set('adsense_text_color','000000').set('adsense_url_color','F0F0F0');ezrpos[5]="5";ezslot_3 = googletag.defineSlot('/1254144/philpad_com-box-4',[[250,250], ['fluid']],'div-gpt-ad-philpad_com-box-4-0').addService(googletag.pubads()).setTargeting('iid2','110338').setTargeting('t','134').setTargeting('d','3788').setTargeting('t1','134').setTargeting('pvc','0').setTargeting('ap','1114').setTargeting('sap','1114').setTargeting('a','|6|').setTargeting('as','revenue').setTargeting('plat','1').setTargeting('bra','mod1').setTargeting('ic','1').setTargeting('at','mbf').setTargeting('adr','398').setTargeting('ezosn','3').setTargeting('reft','tf').setTargeting('refs','30').setTargeting('ga','2497208').setTargeting('gala','').setTargeting('rid','99998').setTargeting('pt','3').setTargeting('al','1003').setTargeting('compid','0').setTargeting('tap','philpad_com-box-4-110338').setTargeting('eb_br','527e52c10635ac8136a4c84094ee49a8').setTargeting('eba','1').setTargeting('asau','5741739740').setTargeting('bv','24').setTargeting('bvm','0').setTargeting('bvr','2').setTargeting('shp','3').setCollapseEmptyDiv(false).setTargeting('ft','1').setTargeting('br1','70').setTargeting('br2','38').setTargeting('ezoic','1').setTargeting('nmau','2').setTargeting('mau','0').setTargeting('stl','67').setTargeting('deal1',[17,19,20,21,22,23,24,25,26,27,28,29,30]);ezslot_3.set('adsense_background_color','FFFFFF').set('adsense_border_color','FFFFFF').set('adsense_channel_ids','6803771486').set('adsense_link_color','858585').set('adsense_text_color','000000').set('adsense_url_color','F0F0F0');ezrpos[3]="3";ezslot_4 = googletag.defineSlot('/1254144/philpad_com-box-4',[[250,250], ['fluid']],'div-gpt-ad-philpad_com-box-4-0_1').addService(googletag.pubads()).setTargeting('iid2','110338').setTargeting('t','134').setTargeting('d','3788').setTargeting('t1','134').setTargeting('pvc','0').setTargeting('ap','1114').setTargeting('sap','1114').setTargeting('a','|251|').setTargeting('as','revenue').setTargeting('plat','1').setTargeting('bra','mod1').setTargeting('ic','1').setTargeting('at','mbf').setTargeting('adr','398').setTargeting('ezosn','4').setTargeting('reft','tf').setTargeting('refs','30').setTargeting('ga','2497208').setTargeting('gala','').setTargeting('rid','99998').setTargeting('pt','3').setTargeting('al','1003').setTargeting('compid','0').setTargeting('tap','philpad_com-box-4-110338').setTargeting('eb_br','527e52c10635ac8136a4c84094ee49a8').setTargeting('eba','1').setTargeting('asau','5741739740').setTargeting('bv','24').setTargeting('bvm','0').setTargeting('bvr','2').setTargeting('shp','3').setCollapseEmptyDiv(false).setTargeting('ft','1').setTargeting('br1','70').setTargeting('br2','38').setTargeting('ezoic','1').setTargeting('nmau','2').setTargeting('mau','1').setTargeting('stl','27').setTargeting('deal1',[17,19,20,21,22,23,24,25,26,27,28,29,30]);ezslot_4.set('adsense_background_color','FFFFFF').set('adsense_border_color','FFFFFF').set('adsense_channel_ids','6803771486').set('adsense_link_color','0C9C11').set('adsense_text_color','000000').set('adsense_url_color','0C9C11');ezrpos[4]="4";ezslot_2 = googletag.defineSlot('/1254144/philpad_com-medrectangle-4',[[468,60],[728,90],[320,50],[234,60],['fluid']],'div-gpt-ad-philpad_com-medrectangle-4-0').addService(googletag.pubads()).setTargeting('iid2','145939').setTargeting('t','134').setTargeting('d','3788').setTargeting('t1','134').setTargeting('pvc','0').setTargeting('ap','1121').setTargeting('sap','1121').setTargeting('a','|1|').setTargeting('as','revenue').setTargeting('plat','1').setTargeting('bra','mod1').setTargeting('ic','1').setTargeting('at','mbf').setTargeting('adr','398').setTargeting('ezosn','2').setTargeting('reft','tf').setTargeting('refs','30').setTargeting('ga','2497208').setTargeting('gala','').setTargeting('rid','99998').setTargeting('pt','22').setTargeting('al','1022').setTargeting('compid','0').setTargeting('tap','philpad_com-medrectangle-4-145939').setTargeting('eb_br','dfa60cee6e1053fc0c9e607c8047bd28').setTargeting('eba','1').setTargeting('asau','5741739740').setTargeting('bv','0').setTargeting('bvm','2').setTargeting('bvr','1').setTargeting('shp','1').setCollapseEmptyDiv(false).setTargeting('ft','1').setTargeting('br1','80').setTargeting('br2','40').setTargeting('ezoic','1').setTargeting('nmau','0').setTargeting('mau','0').setTargeting('stl','117').setTargeting('deal1',[17,19,20,21,22,23,24,25,26,27,28,29,30]);ezslot_2.set('adsense_background_color','FFFFFF').set('adsense_border_color','FFFFFF').set('adsense_channel_ids','6803771486').set('adsense_link_color','1a0dab').set('adsense_text_color','545454').set('adsense_url_color','006621');ezrpos[2]="2";}else{window.ezHideLocations=[];window.ezHideLocations.push('div-gpt-ad-philpad_com-box-3-0');ezslot_6 = googletag.defineSlot('/1254144/philpad_com-box-2',[[468,60],[300,250],[120,240],[180,150],[234,60],[200,200],[970,90],[970,250],[125,125],[728,90],[320,50],[250,250],[320,100],['fluid']],'div-gpt-ad-philpad_com-box-2-0').addService(googletag.pubads()).setTargeting('iid2','115489').setTargeting('t','134').setTargeting('d','3788').setTargeting('t1','134').setTargeting('pvc','0').setTargeting('ap','1105').setTargeting('sap','1105').setTargeting('a','|5|').setTargeting('as','revenue').setTargeting('plat','1').setTargeting('bra','mod1').setTargeting('ic','1').setTargeting('at','mbf').setTargeting('adr','398').setTargeting('ezosn','6').setTargeting('reft','tf').setTargeting('refs','30').setTargeting('ga','2497208').setTargeting('gala','').setTargeting('rid','99998').setTargeting('pt','1').setTargeting('al','1001').setTargeting('compid','0').setTargeting('tap','philpad_com-box-2-115489').setTargeting('eb_br','8de2c8ca79e8623e3cb37120a35ebaa2').setTargeting('eba','1').setTargeting('asau','5741739740').setTargeting('bv','0').setTargeting('bvm','1').setTargeting('bvr','1').setTargeting('shp','1').setTargeting('acptad','1').setCollapseEmptyDiv(false).setTargeting('ft','1').setTargeting('br1','240').setTargeting('br2','120').setTargeting('ezoic','1').setTargeting('nmau','0').setTargeting('mau','0').setTargeting('deal1',[20,21,22,23,24,25,26,27,28,29,30]);ezslot_6.set('adsense_background_color','FFFFFF').set('adsense_border_color','FFFFFF').set('adsense_channel_ids','6803771486').set('adsense_link_color','20929A').set('adsense_text_color','000000').set('adsense_url_color','F0F0F0');ezrpos[6]="6";window.ezHideLocations.push('div-gpt-ad-philpad_com-large-billboard-2-0');window.ezHideLocations.push('div-gpt-ad-philpad_com-large-mobile-banner-1-0');ezslot_7 = googletag.defineSlot('/1254144/philpad_com-box-1',[[300,1050],[320,50],[320,100],[234,60],['fluid']],'div-gpt-ad-philpad_com-box-1-0').addService(googletag.pubads()).setTargeting('iid2','100939').setTargeting('t','134').setTargeting('d','3788').setTargeting('t1','134').setTargeting('pvc','0').setTargeting('ap','1122').setTargeting('sap','1122').setTargeting('a','|254|').setTargeting('as','revenue').setTargeting('plat','1').setTargeting('bra','mod1').setTargeting('ic','1').setTargeting('at','mbf').setTargeting('adr','398').setTargeting('ezosn','7').setTargeting('reft','tf').setTargeting('refs','30').setTargeting('ga','2497208').setTargeting('gala','').setTargeting('rid','99998').setTargeting('pt','0').setTargeting('al','1000').setTargeting('compid','0').setTargeting('tap','philpad_com-box-1-100939').setTargeting('eb_br','9ae587f95e95c876b7b76fd4c72a3838').setTargeting('eba','1').setTargeting('asau','5741739740').setTargeting('bv','0').setTargeting('bvm','2').setTargeting('bvr','1').setTargeting('shp','2').setTargeting('acptad','1').setCollapseEmptyDiv(false).setTargeting('ft','1').setTargeting('br1','180').setTargeting('br2','90').setTargeting('ezoic','1').setTargeting('nmau','0').setTargeting('mau','0').setTargeting('deal1',[20,21,22,23,24,25,26,27,28,29,30]);ezslot_7.set('adsense_background_color','001DAD').set('adsense_border_color','001DAD').set('adsense_channel_ids','6803771486').set('adsense_link_color','FFFFFF').set('adsense_text_color','FFFFFF').set('adsense_url_color','EEFF00');ezrpos[7]="7";window.ezHideLocations.push('div-gpt-ad-philpad_com-medrectangle-2-0');window.ezHideLocations.push('div-gpt-ad-philpad_com-box-4-0');window.ezHideLocations.push('div-gpt-ad-philpad_com-box-4-0_1');window.ezHideLocations.push('div-gpt-ad-philpad_com-medrectangle-4-0');}googletag.pubads().addEventListener('slotRenderEnded', function(event) { __ez.queue.addFunc("ezbanger", "ezbanger", event, false, ['banger.js'], true, true, false, true); });googletag.pubads().addEventListener('impressionViewable', function(event) { __ez.queue.addFunc("ezvb", "ezvb", event, false, ['banger.js'], true, true, false, true); });googletag.pubads().addEventListener('slotResponseReceived', function(event) { __ez.queue.addFunc("ezsr", "ezsr", event, false, ['banger.js'], true, true, false, true); });googletag.pubads().addEventListener('slotRequested', function(e) { window.ezsrqt[e.slot.getSlotElementId()] = Date.now();});googletag.pubads().enableLazyLoad({fetchMarginPercent: 300, renderMarginPercent: 20, mobileScaling: 2.0});googletag.enableServices();});window.ezoll = false;window.ezoadxnc = '1254144';window.ezorefgsl=function(r){Array.isArray(r)||(r=[r]);for(var e=r.length,o=Array(),a=0;a<e;a++){var t=r[a];t.setTargeting("reqt",Date.now()),void 0!==t.DFPSlot?o.push(t.DFPSlot):o.push(t)}googletag.pubads().refresh(o)};var ezoibfh = Array();ezoibfh[0] = 'zero';ezoibfh[1000000] = 'off';ezoibfh[200]='86802a923a1f32517e4c5d3b6d550271';
+ezoibfh[60]='c352ba581bd3ffd8cea608cf2d55f519';
+ezoibfh[48]='8fc09e60bfd78aa82afac0405213359a';
+ezoibfh[22]='1e913e99b80640fd5b86a539e5b97c94';
+ezoibfh[2]='b6c98a8bb15764f1c4ee331dcb724178';
+ezoibfh[28]='674294a1b21a1e89fc99c14c9b17be44';
+ezoibfh[16]='e29f69dd468d31a5514dc9b5587ce757';
+ezoibfh[14]='ad0061a38dd7c6f7bcb692aee88dfda4';
+ezoibfh[220]='43aa1607a0c08c74b14a9039e7b909b4';
+ezoibfh[120]='58ef7bddb438af5e257c4377f32c243a';
+ezoibfh[44]='a928cf2c3ad36f5e9ed2d90f655c1dc9';
+ezoibfh[42]='947f1d5169cc7d0f997560e34838fb04';
+ezoibfh[40]='ee685f77592ce296910ee91457d66ba3';
+ezoibfh[240]='8de2c8ca79e8623e3cb37120a35ebaa2';
+ezoibfh[160]='3530fcb6bcc13dc3c1712eaef7d92700';
+ezoibfh[26]='bf9a045b836005b6c23b7b0749249612';
+ezoibfh[6]='33dd523f8e4dda158f0aa99686dda7f2';
+ezoibfh[140]='af063c244089b52ec5a0423a258f1f8e';
+ezoibfh[50]='3ba982fc4238dd4197b1d51b345478dc';
+ezoibfh[38]='23b5ca1d9de2587e6a4ecfd33d61b709';
+ezoibfh[34]='a7a863b24978e69c4cdbb5a49be70d5e';
+ezoibfh[4]='9c3e4ee8eae7f1433cb2fe69b1326605';
+ezoibfh[8]='2e8b8c60843e52e5aaa1e3a52287a2bb';
+ezoibfh[80]='dfa60cee6e1053fc0c9e607c8047bd28';
+ezoibfh[46]='fe5b0c99ab7ba15f050582be1301303f';
+ezoibfh[36]='8c5ffefb122f59a66a8b7672d4452af2';
+ezoibfh[30]='54d0fa6d5f6aabe7623cb24faa42a441';
+ezoibfh[18]='8de355ef1cf56b7da61277050d9957b1';
+ezoibfh[180]='9ae587f95e95c876b7b76fd4c72a3838';
+ezoibfh[32]='d31e71883d00099e275b6c5878eed023';
+ezoibfh[20]='7432360301409ae695ba255f16fbcf06';
+ezoibfh[12]='14e8a85d4c42ff1db8790cbef9e33493';
+ezoibfh[90]='b355e9227b551c119a30a68852723b62';
+ezoibfh[70]='527e52c10635ac8136a4c84094ee49a8';
+ezoibfh[100]='a495ce7dbb4cefcd3e0a722048894f41';
+ezoibfh[24]='e66c30deca31b19eda212eeca1258584';
+ezoibfh[10]='291d27313eb66c50243129b23df8a579';
+var ezaxmns={};var ezaucmns={};ezaxmns["div-gpt-ad-philpad_com-box-3-0"]=0;ezaucmns["div-gpt-ad-philpad_com-box-3-0"]=0;ezaxmns["div-gpt-ad-philpad_com-box-2-0"]=0;ezaucmns["div-gpt-ad-philpad_com-box-2-0"]=0;ezaxmns["div-gpt-ad-philpad_com-large-billboard-2-0"]=0;ezaucmns["div-gpt-ad-philpad_com-large-billboard-2-0"]=0;ezaxmns["div-gpt-ad-philpad_com-large-mobile-banner-1-0"]=0;ezaucmns["div-gpt-ad-philpad_com-large-mobile-banner-1-0"]=0;ezaxmns["div-gpt-ad-philpad_com-box-1-0"]=0;ezaucmns["div-gpt-ad-philpad_com-box-1-0"]=0;ezaxmns["div-gpt-ad-philpad_com-medrectangle-2-0"]=0;ezaucmns["div-gpt-ad-philpad_com-medrectangle-2-0"]=0;ezaxmns["div-gpt-ad-philpad_com-box-4-0"]=0;ezaucmns["div-gpt-ad-philpad_com-box-4-0"]=0;ezaxmns["div-gpt-ad-philpad_com-box-4-0_1"]=0;ezaucmns["div-gpt-ad-philpad_com-box-4-0_1"]=0;ezaxmns["div-gpt-ad-philpad_com-medrectangle-4-0"]=0;ezaucmns["div-gpt-ad-philpad_com-medrectangle-4-0"]=0;if(typeof window.isEZABL == 'undefined' || window.isEZABL != true) {ezslots.push("ezslot_1");ezslots.push("ezslot_6");ezslots.push("ezslot_0");ezslots.push("ezslot_8");ezslots.push("ezslot_7");ezslots.push("ezslot_5");ezslots.push("ezslot_3");ezslots.push("ezslot_4");ezslots.push("ezslot_2");}else{ezslots.push("ezslot_6");ezslots.push("ezslot_7");}</script>
+<script type="text/javascript">(function(){function storageAvailable(type){var storage;try{storage=window[type];var x='__storage_test__';storage.setItem(x,x);storage.removeItem(x);return true;}
+catch(e){return e instanceof DOMException&&(e.code===22||e.code===1014||e.name==='QuotaExceededError'||e.name==='NS_ERROR_DOM_QUOTA_REACHED')&&(storage&&storage.length!==0);}}
+function remove_ama_config(){if(storageAvailable('localStorage')){localStorage.removeItem("google_ama_config");}}
+remove_ama_config()})()</script>
+<script data-ezscrex="false" type="text/javascript" data-cfasync="false">var _ezaq = {"ad_cache_level":2,"ad_count_adjustment":0,"ad_lazyload_version":6,"ad_location_ids":"34,2,22,3,3,81,5,1,0,700","ad_transform_level":0,"adx_ad_count":9,"bidder_method":1,"bidder_version":1,"city":"Davao City","country":"PH","days_since_last_visit":-1,"display_ad_count":7,"domain_id":3788,"ds_adsize_opt_id":-1,"engaged_time_visit":0,"ezcache_level":2,"forensiq_score":-1,"form_factor_id":1,"framework_id":1,"has_bad_image":0,"has_bad_words":0,"iab_category":"","is_from_recommended_pages":false,"is_return_visitor":false,"is_sitespeed":0,"last_page_load":"","last_pageview_id":"","lt_cache_level":0,"max_ads":7,"metro_code":0,"optimization_version":1,"page_ad_positions":"1105,1108,1114,1114,1118,1120,1121,1122,1125,1126","page_view_count":0,"page_view_id":"b6745c45-d2ab-45df-671b-6eaa9a77965b","position_selection_id":0,"postal_code":"8000","pv_event_count":0,"response_time_orig":2,"serverid":"18.141.201.201:13637","state":"DAS","sub_page_ad_positions":"1105,1108,1114,1114,1118,1120,1121,1122,1125,1126","t_epoch":1598423881,"template_id":134,"time_on_site_visit":0,"url":"https://philpad.com/stock-market-tutorials-philippines-complete-guide/","user_id":0,"weather_precipitation":0,"weather_summary":"","weather_temperature":0,"word_count":786,"worst_bad_word_level":0};var _ezim_d = {"philpad_com-box-1":{"adsense_stat_source_id":5,"adx_ad_count":9,"adx_stat_source_id":35,"full_id":"philpad_com-box-1/2020-08-26/100939","height":"1050","position_id":1122,"sub_position_id":1122,"width":"300"},"philpad_com-box-2":{"adsense_stat_source_id":5,"adx_ad_count":9,"adx_stat_source_id":35,"full_id":"philpad_com-box-2/2020-08-26/115489","height":"60","position_id":1105,"sub_position_id":1105,"width":"468"},"philpad_com-box-3":{"adsense_stat_source_id":5,"adx_ad_count":9,"adx_stat_source_id":35,"full_id":"philpad_com-box-3/2020-08-26/164489","height":"250","position_id":1120,"sub_position_id":1120,"width":"250"},"philpad_com-box-4":{"adsense_stat_source_id":5,"adx_ad_count":9,"adx_stat_source_id":35,"full_id":"philpad_com-box-4/2020-08-26/110338","position_id":1114,"sub_position_id":1114},"philpad_com-box-4_1":{"adsense_stat_source_id":5,"adx_ad_count":9,"adx_stat_source_id":35,"full_id":"philpad_com-box-4/2020-08-26/110338","position_id":1114,"sub_position_id":1114},"philpad_com-large-billboard-2":{"adsense_stat_source_id":5,"adx_ad_count":9,"adx_stat_source_id":35,"full_id":"philpad_com-large-billboard-2/2020-08-26/159789","height":"250","position_id":1108,"sub_position_id":1108,"width":"250"},"philpad_com-large-mobile-banner-1":{"adsense_stat_source_id":5,"adx_ad_count":9,"adx_stat_source_id":35,"full_id":"philpad_com-large-mobile-banner-1/2020-08-26/147489","height":"250","position_id":1118,"sub_position_id":1118,"width":"250"},"philpad_com-link-h-large-1":{"adsense_stat_source_id":5,"adx_ad_count":9,"adx_stat_source_id":35,"full_id":"philpad_com-link-h-large-1/2020-08-26/151787","height":"15","position_id":1126,"sub_position_id":1126,"width":"728"},"philpad_com-medrectangle-2":{"adsense_stat_source_id":5,"adx_ad_count":9,"adx_stat_source_id":35,"full_id":"philpad_com-medrectangle-2/2020-08-26/123789","height":"90","position_id":1125,"sub_position_id":1125,"width":"970"},"philpad_com-medrectangle-4":{"adsense_stat_source_id":5,"adx_ad_count":9,"adx_stat_source_id":35,"full_id":"philpad_com-medrectangle-4/2020-08-26/145939","height":"60","position_id":1121,"sub_position_id":1121,"width":"468"}};var _ezat = {"domain_id":3788,"form_factor_id":1,"framework_id":1,"pageview_date":"2020-08-26","pageview_id":"b6745c45-d2ab-45df-671b-6eaa9a77965b","template_id":134,"url":"https://philpad.com/stock-market-tutorials-philippines-complete-guide/","visit_uuid":"01f9aa05-21b4-4a00-5cce-bb5258e41f04"};</script><script data-ezscrex='false' data-pagespeed-no-defer data-cfasync='false' type="text/javascript">__ez.queue.addFile('banger.js', '/porpoiseant/banger.js?cb=191-1&bv=83&v=35&PageSpeed=off', true, [], true, false, false, true);</script>
+<script>__ez.queue.addFile('/detroitchicago/anaheim.js', '/detroitchicago/anaheim.js?gcb=1&cb=1', false, ['/detroitchicago/minneapolis.js'], true, false, true, false);</script>
+<script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>__ez.dot={};__ez.queue.addFile('/detroitchicago/memphis.js', '/detroitchicago/memphis.js?gcb=191-1&cb=1', false, [], true, false, true, false);__ez.queue.addFile('/detroitchicago/minneapolis.js', '/detroitchicago/minneapolis.js?gcb=191-1&cb=1', false, [], true, false, true, false);__ez.vep=(function(){var pixels=[],pxURL="/detroitchicago/grapefruit.gif";function AddPixel(vID,pixelData){if(__ez.dot.isDefined(vID)&&__ez.dot.isValid(pixelData)){pixels.push({type:'video',video_impression_id:vID,domain_id:__ez.dot.getDID(),t_epoch:__ez.dot.getEpoch(0),data:__ez.dot.dataToStr(pixelData)});}}
+function Fire(){if(typeof document.visibilityState!=='undefined'&&document.visibilityState==="prerender"){return;}
+if(__ez.dot.isDefined(pixels)&&pixels.length>0){while(pixels.length>0){var j=5;if(j>pixels.length){j=pixels.length;}
+var pushPixels=pixels.splice(0,j);(new Image()).src=__ez.dot.getURL(pxURL)+"?orig="+(__ez.template.isOrig===true?1:0)+"&v="+btoa(JSON.stringify(pushPixels));}}
+pixels=[];}
+return{Add:AddPixel,Fire:Fire};})();</script><script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>__ez.pel=(function(){var pixels=[],pxURL="/porpoiseant/army.gif";function AddAndFirePixel(adSlot,pixelData){AddPixel(adSlot,pixelData,0,0,0,0,0);Fire();}
+function GetCurrentPixels(){return pixels;}
+function AddPixel(adSlot,pixelData,revenue,est_revenue,bid_floor_filled,bid_floor_prev,stat_source_id){if(!__ez.dot.isDefined(adSlot)||__ez.dot.isAnyDefined(adSlot.getSlotElementId,adSlot.ElementId)==false){return;}
+var ad_position_id=parseInt(__ez.dot.getTargeting(adSlot,'ap'));var impId=__ez.dot.getSlotIID(adSlot),adUnit=__ez.dot.getAdUnit(adSlot);var compId=parseInt(__ez.dot.getTargeting(adSlot,"compid"));var lineItemId=0;var creativeId=0;var ezimData=getEzimData(adSlot);if(typeof ezimData=='object'){if(ezimData.creative_id!==undefined){creativeId=ezimData.creative_id;}
+if(ezimData.line_item_id!==undefined){lineItemId=ezimData.line_item_id;}}
+if(__ez.dot.isDefined(impId,adUnit)&&__ez.dot.isValid(pixelData)){pixels.push({type:"impression",impression_id:impId,domain_id:__ez.dot.getDID(),unit:adUnit,t_epoch:__ez.dot.getEpoch(0),revenue:revenue,est_revenue:est_revenue,ad_position:ad_position_id,ad_size:"",bid_floor_filled:bid_floor_filled,bid_floor_prev:bid_floor_prev,stat_source_id:stat_source_id,country_code:__ez.dot.getCC(),pageview_id:__ez.dot.getPageviewId(),comp_id:compId,line_item_id:lineItemId,creative_id:creativeId,data:__ez.dot.dataToStr(pixelData)});}}
+function AddPixelById(impFullId,pixelData){var vals=impFullId.split('/');if(__ez.dot.isDefined(impFullId)&&vals.length===3&&__ez.dot.isValid(pixelData)){var adUnit=vals[0],impId=vals[2];pixels.push({type:"impression",impression_id:impId,domain_id:__ez.dot.getDID(),unit:adUnit,t_epoch:__ez.dot.getEpoch(0),pageview_id:__ez.dot.getPageviewId(),data:__ez.dot.dataToStr(pixelData)});}}
+function Fire(){if(typeof document.visibilityState!=='undefined'&&document.visibilityState==="prerender")return;if(__ez.dot.isDefined(pixels)&&pixels.length>0){while(pixels.length>0){var j=5;if(j>pixels.length){j=pixels.length;}
+var pushPixels=pixels.splice(0,j);var pixelURL=__ez.dot.getURL(pxURL)+"?orig="+(__ez.template.isOrig===true?1:0)+"&sts="+btoa(JSON.stringify(pushPixels));if(typeof window.isAmp!=='undefined'&&isAmp&&typeof window._ezaq!=='undefined'&&_ezaq.hasOwnProperty("domain_id")){pixelURL+="&visit_uuid="+_ezaq['visit_uuid'];}
+(new Image()).src=pixelURL;}}
+pixels=[];}
+function getEzimData(adSlot){if(typeof _ezim_d=="undefined"){return false}
+var adUnitName=__ez.dot.getAdUnitPath(adSlot).split('/').pop();if(typeof _ezim_d==='object'&&_ezim_d.hasOwnProperty(adUnitName)){return _ezim_d[adUnitName];}
+for(var ezimKey in _ezim_d){if(ezimKey.split('/').pop()===adUnitName){return _ezim_d[ezimKey];}}
+return false;}
+return{Add:AddPixel,AddAndFire:AddAndFirePixel,AddById:AddPixelById,Fire:Fire,GetPixels:GetCurrentPixels,};})();__ez.queue.addFile('/detroitchicago/raleigh.js', '/detroitchicago/raleigh.js?gcb=191-1&cb=1', false, [], true, false, true, false);__ez.queue.addFile('/detroitchicago/tampa.js', '/detroitchicago/tampa.js?gcb=191-1&cb=1', false, [], true, false, true, false);</script>
+<script data-ezscrex="false" data-pagespeed-no-defer data-cfasync='false' type="text/javascript">__ez.queue.addFile('rochester.js', '/detroitchicago/rochester.js?cb=191-1&v=9', false, [], true, false, true, true);</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- This site is optimized with the Yoast SEO Premium plugin v14.7 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Stock Market Tutorials Philippines – Complete Guide</title>
+	<meta name="robots" content="index, follow">
+	<meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+	<meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+	<link rel="canonical" href="https://philpad.com/stock-market-tutorials-philippines-complete-guide/">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="Stock Market Tutorials Philippines – Complete Guide">
+	<meta property="og:description" content="A complete guide and stock market tutorials in the Philippines about stock market investing and trading in the Phil. Stock Exchange. This is the blueprint to follow especially if you are a beginner or a starter in investing in stocks. Following and understanding the fundamental and technical strategies of investing and trading stocks will surely […]">
+	<meta property="og:url" content="https://philpad.com/stock-market-tutorials-philippines-complete-guide/">
+	<meta property="og:site_name" content="Philpad">
+	<meta property="article:publisher" content="https://www.facebook.com/philpaddotcom">
+	<meta property="article:modified_time" content="2020-07-31T08:49:27+00:00">
+	<meta property="og:image" content="https://i1.wp.com/philpad.com/wp-content/uploads/2019/09/stock-market-tutorials-philippines-complete-guide.png?fit=800%2C800&amp;ssl=1">
+	<meta property="og:image:width" content="800">
+	<meta property="og:image:height" content="800">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:creator" content="@fehldungo">
+	<meta name="twitter:site" content="@fehldungo">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://philpad.com/#organization","name":"Philpad","url":"https://philpad.com/","sameAs":["https://www.facebook.com/philpaddotcom","https://twitter.com/fehldungo"],"logo":{"@type":"ImageObject","@id":"https://philpad.com/#logo","inLanguage":"en-US","url":"https://i1.wp.com/philpad.com/wp-content/uploads/2015/04/philpad-logo-biz.png?fit=360%2C107&ssl=1","width":360,"height":107,"caption":"Philpad"},"image":{"@id":"https://philpad.com/#logo"}},{"@type":"WebSite","@id":"https://philpad.com/#website","url":"https://philpad.com/","name":"Philpad","description":"Your pad on anything Filipino...","publisher":{"@id":"https://philpad.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":"https://philpad.com/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"ImageObject","@id":"https://philpad.com/stock-market-tutorials-philippines-complete-guide/#primaryimage","inLanguage":"en-US","url":"https://i1.wp.com/philpad.com/wp-content/uploads/2019/09/stock-market-tutorials-philippines-complete-guide.png?fit=800%2C800&ssl=1","width":800,"height":800,"caption":"stock market tutorials philippines complete guide"},{"@type":"WebPage","@id":"https://philpad.com/stock-market-tutorials-philippines-complete-guide/#webpage","url":"https://philpad.com/stock-market-tutorials-philippines-complete-guide/","name":"Stock Market Tutorials Philippines \u2013 Complete Guide","isPartOf":{"@id":"https://philpad.com/#website"},"primaryImageOfPage":{"@id":"https://philpad.com/stock-market-tutorials-philippines-complete-guide/#primaryimage"},"datePublished":"2014-09-29T06:36:43+00:00","dateModified":"2020-07-31T08:49:27+00:00","inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://philpad.com/stock-market-tutorials-philippines-complete-guide/"]}]}]}</script>
+	<!-- / Yoast SEO Premium plugin. -->
+
+
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//s.w.org">
+<link rel="dns-prefetch" href="//v0.wordpress.com">
+<link rel="dns-prefetch" href="//i0.wp.com">
+<link rel="dns-prefetch" href="//i1.wp.com">
+<link rel="dns-prefetch" href="//i2.wp.com">
+<link rel="dns-prefetch" href="//jetpack.wordpress.com">
+<link rel="dns-prefetch" href="//s0.wp.com">
+<link rel="dns-prefetch" href="//s1.wp.com">
+<link rel="dns-prefetch" href="//s2.wp.com">
+<link rel="dns-prefetch" href="//public-api.wordpress.com">
+<link rel="dns-prefetch" href="//0.gravatar.com">
+<link rel="dns-prefetch" href="//1.gravatar.com">
+<link rel="dns-prefetch" href="//2.gravatar.com">
+<link rel="alternate" type="application/rss+xml" title="Philpad » Feed" href="http://feeds.feedburner.com/Philpad">
+<link rel="alternate" type="application/rss+xml" title="Philpad » Comments Feed" href="https://philpad.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Philpad » Stock Market Tutorials Philippines – Complete Guide 2020 Comments Feed" href="https://philpad.com/stock-market-tutorials-philippines-complete-guide/feed/">
+		<script>
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/philpad.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.5"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style>
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel="stylesheet" id="atomic-blocks-fontawesome-css" href="https://philpad.com/wp-content/plugins/atomic-blocks/dist/assets/fontawesome/css/all.min.css?ver=1594953120" media="all">
+<link rel="stylesheet" id="revolution-pro-css" href="https://philpad.com/wp-content/themes/revolution-pro/style.css?ver=1.4.0" media="all">
+<style id="revolution-pro-inline-css">
+
+
+		a,
+		.entry-title a:focus,
+		.entry-title a:hover,
+		.footer-widgets a:focus,
+		.footer-widgets a:hover,
+		.genesis-nav-menu a:focus,
+		.genesis-nav-menu a:hover,
+		.genesis-nav-menu .current-menu-item > a,
+		.genesis-nav-menu .sub-menu .current-menu-item > a:focus,
+		.genesis-nav-menu .sub-menu .current-menu-item > a:hover,
+		.gs-faq__question:focus,
+		.gs-faq__question:hover,
+		.menu-toggle:focus,
+		.menu-toggle:hover,
+		.site-footer a:focus,
+		.site-footer a:hover,
+		.sub-menu-toggle:focus,
+		.sub-menu-toggle:hover {
+			color: #06a583;
+		}
+
+		
+
+		a.button,
+		button,
+		.button,
+		.footer-widgets a.button,
+		input[type="button"],
+		input[type="reset"],
+		input[type="submit"],
+		input[type="reset"],
+		input[type="submit"],
+		.entry-content a.button,
+		.entry-content a.button:focus,
+		.entry-content a.button:hover,
+		.widget a.button:focus,
+		.widget a.button:hover,
+		.site-container div.wpforms-container-full .wpforms-form button[type="submit"],
+		.site-container div.wpforms-container-full .wpforms-form button[type="submit"]:hover,
+		.site-container div.wpforms-container-full .wpforms-form input[type="submit"],
+		.site-container div.wpforms-container-full .wpforms-form input[type="submit"]:hover {
+			background-color: #06a583;
+			color: #000000;
+		}
+		
+		.wp-custom-logo .site-container .title-area {
+			max-width: 160px;
+		}
+
+		@media only screen and (min-width: 960px) {
+			.wp-custom-logo .nav-primary,
+			.wp-custom-logo .nav-secondary {
+				width: calc((100% / 2) - 80px);
+			}
+
+			.wp-custom-logo.has-one-menu .nav-primary,
+			.wp-custom-logo.has-one-menu .nav-secondary {
+				width: calc(100% - 160px);
+			}
+		}
+		
+		.wp-custom-logo .title-area {
+			margin-top: 7.5px;
+		}
+		
+</style>
+<link rel="stylesheet" id="wp-block-library-css" href="https://philpad.com/wp-includes/css/dist/block-library/style.min.css?ver=5.5" media="all">
+<style id="wp-block-library-inline-css">
+.has-text-align-justify{text-align:justify;}
+</style>
+<link rel="stylesheet" id="atomic-blocks-style-css-css" href="https://philpad.com/wp-content/plugins/atomic-blocks/dist/blocks.style.build.css?ver=1594953120" media="all">
+<link rel="stylesheet" id="toc-screen-css" href="https://philpad.com/wp-content/plugins/table-of-contents-plus/screen.min.css?ver=2002" media="all">
+<link rel="stylesheet" id="revolution-pro-fonts-css" href="//fonts.googleapis.com/css?family=Noto+Serif+SC%3A300%2C600%7CPlayfair+Display%3A400%2C700%2C700i%7CPoppins%3A400&amp;ver=1.4.0" media="all">
+<link rel="stylesheet" id="dashicons-css" href="https://philpad.com/wp-includes/css/dashicons.min.css?ver=5.5" media="all">
+<link rel="stylesheet" id="revolution-pro-gutenberg-css" href="https://philpad.com/wp-content/themes/revolution-pro/lib/gutenberg/front-end.css?ver=1.4.0" media="all">
+<style id="revolution-pro-gutenberg-inline-css">
+.ab-block-post-grid .ab-post-grid-items h2 a:hover,
+.site-container .has-theme-primary-color,
+.site-container .wp-block-button .wp-block-button__link.has-theme-primary-color,
+.site-container .wp-block-button.is-style-outline .wp-block-button__link.has-theme-primary-color {
+	color: #06a583;
+}
+
+.site-container .has-theme-primary-background-color,
+.site-container .wp-block-button .wp-block-button__link.has-theme-primary-background-color,
+.site-container .wp-block-pullquote.is-style-solid-color.has-theme-primary-background-color {
+	background-color: #06a583;
+}
+
+.site-container .has-theme-secondary-color,
+.site-container .wp-block-button .wp-block-button__link.has-theme-secondary-color,
+.site-container .wp-block-button.is-style-outline .wp-block-button__link {
+	color: #06a583;
+}
+
+.wp-block-button .wp-block-button__link:not(.has-background),
+.wp-block-button .wp-block-button__link:not(.has-background):focus,
+.wp-block-button .wp-block-button__link:not(.has-background):hover {
+	color: #000000;
+}
+
+.site-container .has-theme-secondary-background-color,
+.site-container .wp-block-button .wp-block-button__link,
+.site-container .wp-block-pullquote.is-style-solid-color.has-theme-secondary-background-color {
+	background-color: #06a583;
+}
+.site-container .rev-overlap {
+	margin-top: -25% !important;
+}		.has-theme-primary-color {
+			color: #06a583;
+		}		.has-theme-secondary-color {
+			color: #06a583;
+		}
+</style>
+<link rel="stylesheet" id="tablepress-default-css" href="https://philpad.com/wp-content/plugins/tablepress/css/default.min.css?ver=1.12" media="all">
+<link rel="stylesheet" id="jetpack_css-css" href="https://philpad.com/wp-content/plugins/jetpack/css/jetpack.css?ver=8.8.2" media="all">
+<script src='https://philpad.com/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp' id='jquery-js'></script>
+<link rel="https://api.w.org/" href="https://philpad.com/wp-json/"><link rel="alternate" type="application/json" href="https://philpad.com/wp-json/wp/v2/pages/16584"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://philpad.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://philpad.com/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 5.5">
+<link rel="shortlink" href="https://wp.me/P2wPJM-4ju">
+<link rel="alternate" type="application/json+oembed" href="https://philpad.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fphilpad.com%2Fstock-market-tutorials-philippines-complete-guide%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://philpad.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fphilpad.com%2Fstock-market-tutorials-philippines-complete-guide%2F&amp;format=xml">
+<style type="text/css">div#toc_container {background: #ffffff;border: 1px solid #aaaaaa;width: 100%;}div#toc_container p.toc_title a,div#toc_container ul.toc_list a {color: #009fb7;}</style><!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-32963632-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-32963632-1');
+</script>
+
+
+
+
+<meta name="p:domain_verify" content="bb1f81d265edd84799901d170c1d6c40">
+
+<meta name="ahrefs-site-verification" content="3176eeadcc14241ffaa47065240a57f89a349b56bf6846ab3b61e600c703aa38">			<style type="text/css">
+				/* If html does not have either class, do not show lazy loaded images. */
+				html:not( .jetpack-lazy-images-js-enabled ):not( .js ) .jetpack-lazy-image {
+					display: none;
+				}
+			</style>
+			<script>
+				document.documentElement.classList.add(
+					'jetpack-lazy-images-js-enabled'
+				);
+			</script>
+		<link rel="icon" href="https://i2.wp.com/philpad.com/wp-content/uploads/2020/07/cropped-Copy-of-philpad.png?fit=32%2C32&amp;ssl=1" sizes="32x32">
+<link rel="icon" href="https://i2.wp.com/philpad.com/wp-content/uploads/2020/07/cropped-Copy-of-philpad.png?fit=192%2C192&amp;ssl=1" sizes="192x192">
+<link rel="apple-touch-icon" href="https://i2.wp.com/philpad.com/wp-content/uploads/2020/07/cropped-Copy-of-philpad.png?fit=180%2C180&amp;ssl=1">
+<meta name="msapplication-TileImage" content="https://i2.wp.com/philpad.com/wp-content/uploads/2020/07/cropped-Copy-of-philpad.png?fit=270%2C270&amp;ssl=1">
+<style>.ezoic-ad.box-2 { display:block !important;float:none;margin-bottom:20px !important;margin-left:0px !important;margin-right:0px !important;margin-top:15px !important;min-height:60px;min-width:468px;text-align:center !important; }
+.ezoic-ad.link-h-large-1 { display:block !important;float:none;margin-bottom:15px !important;margin-left:0px !important;margin-right:0px !important;margin-top:15px !important;min-width:728px;text-align:center !important; }
+.ezoic-ad.box-3 { display:block !important;float:none;margin-bottom:15px !important;margin-left:0px !important;margin-right:0px !important;margin-top:15px !important;min-height:250px;min-width:250px;text-align:center !important; }
+.ezoic-ad.medrectangle-4 { display:block !important;float:none;margin-bottom:15px !important;margin-left:0px !important;margin-right:0px !important;margin-top:15px !important;min-height:60px;min-width:468px;text-align:center !important; }
+.ezoic-ad.box-4 { display:block !important;float:none;margin-bottom:15px !important;margin-left:0px !important;margin-right:0px !important;margin-top:15px !important;min-height:250px;min-width:250px;text-align:center !important; }
+.ezoic-ad.box-4 { display:block !important;float:none;margin-bottom:15px !important;margin-left:0px !important;margin-right:0px !important;margin-top:15px !important;min-height:250px;min-width:250px;text-align:center !important; }
+.ezoic-ad.box-4 { background:0 0 !important;display:flex !important;float:none;justify-content:space-between;margin-bottom:15px !important;margin-left:auto !important;margin-right:auto !important;margin-top:15px !important;min-height:250px;min-width:580px;text-align:center !important;width:580px; }
+.ezoic-ad.large-mobile-banner-1 { display:block !important;float:none;margin-bottom:15px !important;margin-left:0px !important;margin-right:0px !important;margin-top:15px !important;min-height:250px;min-width:250px;text-align:center !important; }
+.ezoic-ad.box-1 { display:block !important;float:none;margin-bottom:20px !important;margin-left:0px !important;margin-right:0px !important;margin-top:15px !important;min-height:1050px;min-width:300px;text-align:center !important; }
+.ezoic-ad.large-billboard-2 { display:block !important;float:none;margin-bottom:15px !important;margin-left:0px !important;margin-right:0px !important;margin-top:15px !important;min-height:250px;min-width:250px;text-align:center !important; }
+.ezoic-ad.medrectangle-2 { display:inline-block;float:none;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-height:90px;min-width:970px; }
+.ezoic-ad{display:inline-block;}
+.ezoic-ad .ezoic-adl {border:1px #c0c0c047 solid;border-radius:6px;overflow:hidden;background:url("/utilcave_com/l.svg") no-repeat center center}.ezoic-ad .ezfound,.ezmob-footer .ezoic-ad .ezoic-ad,.ezoic-ad-adaptive > .ezoic-ad, .ezoic-ad-rl {background:0 0;border-radius:0;border:none}
+.adtester-container-106,.adtester-container-113,.adtester-container-124,.adtester-container-115,.adtester-container-128,.adtester-container-129,.adtester-container-107,.adtester-container-109,.adtester-container-116,.adtester-container-110,.adtester-container-112,.adtester-container-119,.adtester-container-127,.adtester-container-117{display:none!important}
+
+		.ezmob-footer {
+			position: fixed; left: 0px; bottom: 0px; width: 100%; background: white; z-index: 100000;
+		}
+		.ezmob-footer-desktop {
+			background-color:rgba(255, 255, 255, 0.8);
+			border-top:1px solid lightgray;
+			padding-top:5px;
+		}
+		.ezmob-footer-close {
+			cursor: pointer;
+			color: #b2b2b2;
+			border: 1px solid #b2b2b2;
+			border-radius: 20px;
+			background: #fff;
+			line-height: 20px;
+			display: inline-block;
+			font-size: 20px;
+			font-family: arial,sans-serif;
+			padding: 0 5px;
+			position: absolute;
+			top: 5px;
+			right: 5px;
+			height: 24px;
+			width: 21px;
+		}
+		body { 
+			padding-bottom: 100px;
+			height: auto;
+		}
+		.ezmob-footer-close-mobile {
+			display:none;
+		}
+		</style>
+<script data-ezscrex="false" data-cfasync="false" type="text/javascript">window.google_analytics_uacct = "UA-59843679-44";</script>
+<script data-ezscrex="false" data-cfasync="false" type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['e._setAccount', 'UA-59843679-44']);
+_gaq.push(['f._setAccount', 'UA-38339005-1']);
+_gaq.push(['e._setDomainName', 'philpad.com']);
+_gaq.push(['f._setDomainName', 'philpad.com']);
+_gaq.push(['e._setCustomVar',1,'template','pub_site',3]);
+_gaq.push(['e._setCustomVar',2,'t','134',3]);
+_gaq.push(['e._setCustomVar',3,'rid','0',2]);
+_gaq.push(['e._setCustomVar',4,'bra','mod1',3]);
+_gaq.push(['e._setAllowAnchor',true]);
+_gaq.push(['e._setSiteSpeedSampleRate', 10]);
+_gaq.push(['f._setCustomVar',1,'template','pub_site',3]);
+_gaq.push(['f._setCustomVar',2,'domain','philpad.com',3]);
+_gaq.push(['f._setSiteSpeedSampleRate', 20]);
+_gaq.push(['e._trackPageview']);
+_gaq.push(['f._trackPageview']);
+
+_gaq.push(['_setAccount', 'UA-32963632-1']);
+_gaq.push(['_setDomainName', 'philpad.com']);
+_gaq.push(['_trackPageview']);
+
+
+(function() {
+ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script type="text/javascript">var ezouid = "1";</script><base href="https://philpad.com/stock-market-tutorials-philippines-complete-guide/"><script type='text/javascript'>
+var ezoTemplate = 'pub_site';
+if(typeof ezouid == 'undefined')
+{
+    var ezouid = 'none';
+}
+var ezoFormfactor = '1';
+var ezo_elements_to_check = Array();
+</script>
+
+<!-- START EZHEAD -->
+<script data-ezscrex="false" type='text/javascript'>
+var soc_app_id = '0';
+var did = 3788;
+var ezdomain = 'philpad.com';
+var ezoicSearchable = 1;
+</script>
+<!--{jquery}-->
+<!-- END EZHEAD -->
+
+<script data-ezscrex='false' data-pagespeed-no-defer data-cfasync='false' type='text/javascript' style='display:none'>
+__ez.queue.addFile('__ezf_ezosuigeneris', '//g.ezoic.net/ezosuigeneris.js', true, [], true, false, false, false);
+var __ez_ezosuigenerisEvt = function() { if(typeof(ezosuigeneris) != 'undefined'){__ez.bit.AddAndFire(_ezaq['page_view_id'], [(new __ezDotData('universal_user_id', ezosuigeneris))]); }};
+__ez.queue.addFunc('__ez_ezosuigenerisEvt', '__ez_ezosuigenerisEvt', null, false, ['__ezf_ezosuigeneris','/detroitchicago/minneapolis.js','/detroitchicago/memphis.js'], false, false, false, false);</script><script data-ezscrex='false' data-pagespeed-no-defer data-cfasync='false' type='text/javascript' style='display:none'>__ez.queue.addFile('__ezf_ezosuigenerisc', '//g.ezoic.net/ezosuigenerisc.js?nogen=1', true, ["/detroitchicago/boise.js"], true, false, false, false);</script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+(function(){
+	var div = document.createElement('div');
+	div.id = 'dmo1';
+	div.style = 'display:none';
+	var s = document.createElement('script');
+	var code = `var googleAdClient = "ca-pub-6396844742497208";
+			  window.google_ad_client = googleAdClient;
+			  /* dmo */
+			  window.google_ad_slot = "dmo";
+			  window.google_ad_width = 88;
+			  window.google_ad_height = 31;
+			  (adsbygoogle = window.adsbygoogle || []).push({
+				  google_ad_client: googleAdClient,
+				  enable_page_level_ads: false
+			  });`;
+	var ss = document.createElement('script');
+	ss.src = '//pagead2.googlesyndication.com/pagead/show_ads.js';
+	ss.type = 'text/javascript';
+	ss.async = false;
+	try {
+		s.appendChild(document.createTextNode(code));
+	} catch (e) {
+		s.text = code;
+	}
+	div.appendChild(s);
+	div.appendChild(ss);
+	if (document.readyState == 'interactive' || document.readyState == 'complete') {
+		document.body.appendChild(div);
+	} else {
+		document.addEventListener("DOMContentLoaded", function(event) {
+			document.body.appendChild(div);
+		});
+	}
+}());
+</script>
+<script data-ezscrex='false' data-pagespeed-no-defer data-cfasync='false'>
+function create_ezolpl(pvID, rv) {
+    var d = new Date();
+    d.setTime(d.getTime() + (365*24*60*60*1000));
+    var expires = "expires="+d.toUTCString();
+    __ez.ck.setByCat("ezux_lpl_3788=" + new Date().getTime() + "|" + pvID + "|" + rv + "; " + expires, 3);
+}
+function attach_ezolpl(pvID, rv) {
+    if (document.readyState === "complete") {
+        create_ezolpl(pvID, rv);
+    }
+    if(window.attachEvent) {
+        window.attachEvent("onload", create_ezolpl, pvID, rv);
+    } else {
+        if(window.onload) {
+            var curronload = window.onload;
+            var newonload = function(evt) {
+                curronload(evt);
+                create_ezolpl(pvID, rv);
+            };
+            window.onload = newonload;
+        } else {
+            window.onload = create_ezolpl.bind(null, pvID, rv);
+        }
+    }
+}
+
+__ez.queue.addFunc("attach_ezolpl", "attach_ezolpl", ["b6745c45-d2ab-45df-671b-6eaa9a77965b", "false"], false, ['/detroitchicago/boise.js'], true, false, false, false);
+</script></head>
+<body class="page-template-default page page-id-16584 wp-custom-logo wp-embed-responsive header-full-width content-sidebar genesis-breadcrumbs-hidden genesis-singular-image-hidden genesis-footer-widgets-visible eleven40-pro-blue"><div class="site-container"><ul class="genesis-skip-link"><li><a href="#genesis-nav-primary" class="screen-reader-shortcut"> Skip to primary navigation</a></li><li><a href="#genesis-content" class="screen-reader-shortcut"> Skip to main content</a></li><li><a href="#genesis-sidebar-primary" class="screen-reader-shortcut"> Skip to primary sidebar</a></li><li><a href="#genesis-footer-widgets" class="screen-reader-shortcut"> Skip to footer</a></li></ul><header class="site-header"><div class="wrap"><nav class="nav-primary" aria-label="Main" id="genesis-nav-primary"><div class="wrap"><ul id="menu-catergory-menu-left" class="menu genesis-nav-menu menu-primary js-superfish"><li id="menu-item-18086" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-18086"><a title="Home" href="https://philpad.com"><span>Home</span></a></li>
+<li id="menu-item-18817" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-18817"><a><span>Travel</span></a>
+<ul class="sub-menu">
+	<li id="menu-item-171" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-171"><a href="https://philpad.com/category/travel/"><span>Guides and Tips</span></a></li>
+	<li id="menu-item-345" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-345"><a href="https://philpad.com/category/visa/"><span>VISA Requirements</span></a></li>
+</ul>
+</li>
+<li id="menu-item-27401" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-27401"><a href="https://philpad.com/category/web/"><span>Web</span></a></li>
+<li id="menu-item-27402" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-27402"><a href="https://philpad.com/category/gadgets/"><span>Technology</span></a></li>
+</ul></div></nav><div class="title-area"><a href="https://philpad.com/" class="custom-logo-link" rel="home"><img width="320" height="90" src="https://i2.wp.com/philpad.com/wp-content/uploads/2020/07/philpad-logo-star.png?fit=320%2C90&amp;ssl=1" class="custom-logo jetpack-lazy-image" alt="philpad logo star" loading="lazy" data-lazy-srcset="https://i2.wp.com/philpad.com/wp-content/uploads/2020/07/philpad-logo-star.png?w=320&amp;ssl=1 320w, https://i2.wp.com/philpad.com/wp-content/uploads/2020/07/philpad-logo-star.png?resize=300%2C84&amp;ssl=1 300w" data-lazy-sizes="(max-width: 320px) 100vw, 320px" data-lazy-src="https://i2.wp.com/philpad.com/wp-content/uploads/2020/07/philpad-logo-star.png?fit=320%2C90&amp;ssl=1&amp;is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></a><p class="site-title">Philpad</p><p class="site-description">Your pad on anything Filipino...</p></div><nav class="nav-secondary" aria-label="Secondary"><div class="wrap"><ul id="menu-category-menu-right" class="menu genesis-nav-menu menu-secondary js-superfish"><li id="menu-item-27288" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-27288"><a href="https://philpad.com/category/jobs/"><span>Jobs</span></a></li>
+<li id="menu-item-27407" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-27407"><a href="https://philpad.com/category/trending/"><span>Trending</span></a></li>
+<li id="menu-item-27411" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home current-menu-ancestor current-menu-parent menu-item-has-children menu-item-27411"><a href="https://philpad.com"><span>More…</span></a>
+<ul class="sub-menu">
+	<li id="menu-item-27290" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-27290"><a href="https://philpad.com/category/tax/"><span>Tax Guides</span></a></li>
+	<li id="menu-item-27404" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-27404"><a href="https://philpad.com/stock-market-tutorials-philippines-complete-guide/" aria-current="page"><span>Stock Market Beginners Guide</span></a></li>
+	<li id="menu-item-27406" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-27406"><a href="https://philpad.com/tag/mutual-funds/"><span>Mutual Funds Guide</span></a></li>
+	<li id="menu-item-27409" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-27409"><a href="https://philpad.com/tag/uitf/"><span>UITF Guides</span></a></li>
+</ul>
+</li>
+</ul></div></nav></div></header><div class="site-inner"><span id="ezoic-pub-ad-placeholder-105" class="ezoic-adpicker-ad"></span><span style='display:block !important;float:none;margin-bottom:20px !important;margin-left:0px !important;margin-right:0px !important;margin-top:15px !important;min-height:60px;min-width:468px;text-align:center !important;' class='ezoic-ad box-2 adtester-container adtester-container-105' data-ez-name='philpad_com-box-2'><span id='div-gpt-ad-philpad_com-box-2-0' ezaw='468' ezah='60' style='position:relative;z-index:0;display:inline-block;width:100%;max-width:1200px;margin-left:auto !important;margin-right:auto !important;min-height:60px;min-width:468px;' class='ezoic-ad ezoic-adl'><script data-ezscrex='false' data-cfasync='false' type='text/javascript' style='display:none;'>eval(ez_write_tag([[468,60],'philpad_com-box-2','ezslot_6',105,'0','0']));</script></span></span><div class="content-sidebar-wrap"><main class="content" id="genesis-content"><article class="post-16584 page type-page status-publish has-post-thumbnail entry" aria-label="Stock Market Tutorials Philippines – Complete Guide 2020"><header class="entry-header"><h1 class="entry-title">Stock Market Tutorials Philippines – Complete Guide 2020</h1>
+</header><span id="ezoic-pub-ad-placeholder-126" class="ezoic-adpicker-ad"></span><span style='display:block !important;float:none;margin-bottom:15px !important;margin-left:0px !important;margin-right:0px !important;margin-top:15px !important;min-width:728px;text-align:center !important;' class='ezoic-ad link-h-large-1 adtester-container adtester-container-126' data-ez-name='philpad_com-link-h-large-1'><div id='philpad_com-link-h-large-1' class='ezo_link_unit_a'><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><!-- link-h-large-1 --><ins class="adsbygoogle" style="display:inline-block;width:728px;height:15px" data-ad-client="ca-pub-9649483783363244" data-ad-slot="9849054458" data-ad-channel="1518002821"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></span><div class="entry-content"><span id="ezoic-pub-ad-placeholder-120" class="ezoic-adpicker-ad"></span><span style='display:block !important;float:none;margin-bottom:15px !important;margin-left:0px !important;margin-right:0px !important;margin-top:15px !important;min-height:250px;min-width:250px;text-align:center !important;' class='ezoic-ad box-3 adtester-container adtester-container-120' data-ez-name='philpad_com-box-3'><span id='div-gpt-ad-philpad_com-box-3-0' ezaw='250' ezah='250' style='position:relative;z-index:0;display:inline-block;width:100%;max-width:1200px;margin-left:auto !important;margin-right:auto !important;min-height:250px;min-width:250px;' class='ezoic-ad'><script data-ezscrex='false' data-cfasync='false' type='text/javascript' style='display:none;'>eval(ez_write_tag([[250,250],'philpad_com-box-3','ezslot_1',120,'0','0']));</script></span></span>
+<p>A complete guide and stock market tutorials in the Philippines about stock market investing and trading in the Phil. Stock Exchange. This is the blueprint to follow especially if you are a beginner or a starter in investing in stocks.</p>
+
+
+
+<p>Following and understanding the fundamental and technical strategies of investing and trading stocks will surely make you a millionaire in a few years time or even a billionaire if time permitted so…</p>
+
+
+
+<p>I made this framework of tutorials for everyone especially my avid readers here at Philpad. You know who you are. 🙂 And for newbies who I want to welcome gladly and chat in the comments and our Facebook and Instagram page. PDF may be available soon too.</p><span id="ezoic-pub-ad-placeholder-121" class="ezoic-adpicker-ad"></span><span style='display:block !important;float:none;margin-bottom:15px !important;margin-left:0px !important;margin-right:0px !important;margin-top:15px !important;min-height:60px;min-width:468px;text-align:center !important;' class='ezoic-ad medrectangle-4 adtester-container adtester-container-121' data-ez-name='philpad_com-medrectangle-4'><span id='div-gpt-ad-philpad_com-medrectangle-4-0' ezaw='468' ezah='60' style='position:relative;z-index:0;display:inline-block;width:100%;max-width:1200px;margin-left:auto !important;margin-right:auto !important;min-height:60px;min-width:468px;' class='ezoic-ad ezoic-adl'><script data-ezscrex='false' data-cfasync='false' type='text/javascript' style='display:none;'>eval(ez_write_tag([[468,60],'philpad_com-medrectangle-4','ezslot_2',121,'0','0']));</script></span></span>
+
+
+
+<p><strong>Important notes:</strong></p>
+
+
+
+<p>Please read the following posts one by one because there is no shortcut in making money. There is no shortcut in learning things. Investing is a serious business and you should know the basics of it.</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-full"><a href="https://philpad.com/stock-market-tutorials-philippines-complete-guide/"><img loading="lazy" width="400" height="571" src="https://i1.wp.com/philpad.com/wp-content/uploads/2014/09/stock-market-tutorials-philippines.jpg?resize=400%2C571&amp;ssl=1" alt="stock-market-tutorials-philippines" class="wp-image-16585 jetpack-lazy-image" data-recalc-dims="1" data-lazy-srcset="https://i1.wp.com/philpad.com/wp-content/uploads/2014/09/stock-market-tutorials-philippines.jpg?w=400&amp;ssl=1 400w, https://i1.wp.com/philpad.com/wp-content/uploads/2014/09/stock-market-tutorials-philippines.jpg?resize=210%2C300&amp;ssl=1 210w" data-lazy-sizes="(max-width: 400px) 100vw, 400px" data-lazy-src="https://i1.wp.com/philpad.com/wp-content/uploads/2014/09/stock-market-tutorials-philippines.jpg?resize=400%2C571&amp;is-pending-load=1#038;ssl=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><noscript><img loading="lazy" width="400" height="571" src="https://i1.wp.com/philpad.com/wp-content/uploads/2014/09/stock-market-tutorials-philippines.jpg?resize=400%2C571&#038;ssl=1" alt="stock-market-tutorials-philippines" class="wp-image-16585" srcset="https://i1.wp.com/philpad.com/wp-content/uploads/2014/09/stock-market-tutorials-philippines.jpg?w=400&amp;ssl=1 400w, https://i1.wp.com/philpad.com/wp-content/uploads/2014/09/stock-market-tutorials-philippines.jpg?resize=210%2C300&amp;ssl=1 210w" sizes="(max-width: 400px) 100vw, 400px" data-recalc-dims="1" /></noscript></a></figure></div>
+
+
+
+<blockquote class="wp-block-quote is-style-default"><p style="text-align: left;"><strong>Keep calm and make millions of money!”</strong></p></blockquote>
+
+
+
+<h2><span style="color: #303030;">Stock Market Tutorials Philippines</span> 2020</h2>
+
+
+
+<h3><span style="color: #303030;">Step by Step Guide in Investing and Trading Stocks in the Philippine Stock Market:</span></h3>
+
+
+
+<p>Just tap the links below to visit the pages corresponding to the topics.</p>
+
+
+
+<p><strong>INTRODUCTION:</strong></p>
+
+
+
+<ul><li style="text-align: justify;"><a href="https://philpad.com/ultimate-guide-on-how-to-invest-in-stocks-in-the-philippines/" target="_blank" rel="noopener noreferrer"><strong>Why should you Invest in Stocks?</strong></a></li><li style="text-align: justify;"><a href="https://philpad.com/how-to-become-a-millionaire-in-the-philippines-in-5-years/" target="_blank" rel="noopener noreferrer"><strong>How to become a Millionaire in 5 Years?</strong></a></li><li style="text-align: justify;"><a href="https://philpad.com/2-amazing-ways-to-invest-in-stocks-and-earn-millions/" target="_blank" rel="noopener noreferrer"><strong>2 Amazing Ways to Invest in Stocks</strong></a></li><li style="text-align: justify;"><a href="https://philpad.com/what-is-peso-cost-averaging-and-how-does-it-work/" target="_blank" rel="noopener noreferrer"><strong>What is Peso Cost Averaging and How does it Work?</strong></a></li><li style="text-align: justify;"><a href="https://philpad.com/lump-sum-investing-versus-peso-cost-averaging/" target="_blank" rel="noopener noreferrer"><strong>Lump Sum Investing vs Peso Cost Averaging Method</strong></a></li></ul><span id="ezoic-pub-ad-placeholder-113" class="ezoic-adpicker-ad"></span>
+
+
+
+<figure class="wp-block-image alignwide size-full"><a href="https://philpad.com"><img loading="lazy" width="500" height="375" src="https://i2.wp.com/philpad.com/wp-content/uploads/2014/09/how-to-invest-in-the-stock-market.jpg?resize=500%2C375&amp;ssl=1" alt="how to invest in the stock market" class="wp-image-16586 jetpack-lazy-image" data-recalc-dims="1" data-lazy-srcset="https://i2.wp.com/philpad.com/wp-content/uploads/2014/09/how-to-invest-in-the-stock-market.jpg?w=500&amp;ssl=1 500w, https://i2.wp.com/philpad.com/wp-content/uploads/2014/09/how-to-invest-in-the-stock-market.jpg?resize=300%2C225&amp;ssl=1 300w" data-lazy-sizes="(max-width: 500px) 100vw, 500px" data-lazy-src="https://i2.wp.com/philpad.com/wp-content/uploads/2014/09/how-to-invest-in-the-stock-market.jpg?resize=500%2C375&amp;is-pending-load=1#038;ssl=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><noscript><img loading="lazy" width="500" height="375" src="https://i2.wp.com/philpad.com/wp-content/uploads/2014/09/how-to-invest-in-the-stock-market.jpg?resize=500%2C375&#038;ssl=1" alt="how to invest in the stock market" class="wp-image-16586" srcset="https://i2.wp.com/philpad.com/wp-content/uploads/2014/09/how-to-invest-in-the-stock-market.jpg?w=500&amp;ssl=1 500w, https://i2.wp.com/philpad.com/wp-content/uploads/2014/09/how-to-invest-in-the-stock-market.jpg?resize=300%2C225&amp;ssl=1 300w" sizes="(max-width: 500px) 100vw, 500px" data-recalc-dims="1" /></noscript></a></figure>
+
+
+
+<blockquote class="wp-block-quote"><p style="text-align: left;"><strong>You are involved with investments now. I’m glad you know what you’re getting into and the awesome benefits of it.”</strong></p></blockquote>
+
+
+
+<ul><li><strong><a rel="noopener noreferrer" href="https://philpad.com/requirements-to-invest-and-trade-in-the-stock-market/" target="_blank">Requirements to Invest and Trade in the Stock Market</a></strong></li><li><a rel="noopener noreferrer" href="https://philpad.com/best-stock-brokers-in-the-philippines/" target="_blank"><strong>Best Online Stock Brokers in the Philippine Stock Exchange</strong></a></li><li><strong><a rel="noopener noreferrer" href="https://philpad.com/my-first-investment-tips-for-beginners-on-investing-stocks/" target="_blank">My First Investment: Tips for Beginners on Investing Stocks</a></strong></li><li><a rel="noopener noreferrer" href="https://philpad.com/how-to-open-col-financial-account-online/" target="_blank"><strong>How to Open COL Financial Account Online</strong></a></li><li><a rel="noopener noreferrer" href="https://philpad.com/how-to-fund-col-account-using-bdo-online-banking/" target="_blank"><strong>How to Fund COL Account using BDO</strong></a></li><li><strong><a href="https://philpad.com/col-financial-eip-easy-investment-program-review-stock-list/" target="_blank" rel="noreferrer noopener" aria-label="COL Financial EIP:&nbsp;Easy Investment Program Review and Stocks List 2020 (opens in a new tab)">COL Financial EIP:&nbsp;Easy Investment Program Review and Stocks List 2020</a></strong></li></ul>
+
+
+
+<blockquote class="wp-block-quote"><p style="text-align: left;"><strong>Now what? Geez you’re ready &nbsp;to surf the waves of the stock market!”</strong></p></blockquote>
+
+
+
+<div class="wp-block-image size-full wp-image-16587"><figure class="aligncenter size-full"><img loading="lazy" width="400" height="400" src="https://i0.wp.com/philpad.com/wp-content/uploads/2014/09/surf-tumblr.jpg?resize=400%2C400&amp;ssl=1" alt="photo credit: Tumblr" class="wp-image-16587 jetpack-lazy-image" data-recalc-dims="1" data-lazy-srcset="https://i0.wp.com/philpad.com/wp-content/uploads/2014/09/surf-tumblr.jpg?w=400&amp;ssl=1 400w, https://i0.wp.com/philpad.com/wp-content/uploads/2014/09/surf-tumblr.jpg?resize=150%2C150&amp;ssl=1 150w, https://i0.wp.com/philpad.com/wp-content/uploads/2014/09/surf-tumblr.jpg?resize=300%2C300&amp;ssl=1 300w, https://i0.wp.com/philpad.com/wp-content/uploads/2014/09/surf-tumblr.jpg?resize=100%2C100&amp;ssl=1 100w" data-lazy-sizes="(max-width: 400px) 100vw, 400px" data-lazy-src="https://i0.wp.com/philpad.com/wp-content/uploads/2014/09/surf-tumblr.jpg?resize=400%2C400&amp;is-pending-load=1#038;ssl=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><noscript><img loading="lazy" width="400" height="400" src="https://i0.wp.com/philpad.com/wp-content/uploads/2014/09/surf-tumblr.jpg?resize=400%2C400&#038;ssl=1" alt="photo credit: Tumblr" class="wp-image-16587" srcset="https://i0.wp.com/philpad.com/wp-content/uploads/2014/09/surf-tumblr.jpg?w=400&amp;ssl=1 400w, https://i0.wp.com/philpad.com/wp-content/uploads/2014/09/surf-tumblr.jpg?resize=150%2C150&amp;ssl=1 150w, https://i0.wp.com/philpad.com/wp-content/uploads/2014/09/surf-tumblr.jpg?resize=300%2C300&amp;ssl=1 300w, https://i0.wp.com/philpad.com/wp-content/uploads/2014/09/surf-tumblr.jpg?resize=100%2C100&amp;ssl=1 100w" sizes="(max-width: 400px) 100vw, 400px" data-recalc-dims="1" /></noscript><figcaption>photo credit: Tumblr</figcaption></figure></div>
+
+
+
+<ul><li><a rel="noopener noreferrer" href="https://philpad.com/when-should-you-buy-stocks-in-the-stock-market/" target="_blank"><strong>When should you Buy Stocks in the Stock Market?</strong></a></li><li><a rel="noopener noreferrer" href="https://philpad.com/how-to-buy-stocks-online-using-col-financial/" target="_blank"><strong>How to Buy Stocks Online using COL Financial?</strong></a></li><li><strong><a href="https://philpad.com/best-stocks-in-the-philippines/" target="_blank" rel="noreferrer noopener" aria-label="Best Stocks in the Philippines in 2020 (opens in a new tab)">Best Stocks in the Philippines in 2020</a></strong></li><li><strong><a rel="noopener noreferrer" href="https://philpad.com/when-should-you-sell-stocks-in-the-stock-market/" target="_blank">When should you Sell Stocks in the Stock Market?</a></strong></li><li><a title="How to Sell Stocks Online using COL Financial" rel="noopener noreferrer" href="http://philpad.com/how-to-sell-stocks-online-using-col-financial/" target="_blank"><strong>How to Sell Stocks Online using COL Financial?</strong></a></li><li><strong><a rel="noreferrer noopener" aria-label="Top 30 List of Companies in PSEi 2020 (opens in a new tab)" href="https://philpad.com/list-of-companies-in-psei/" target="_blank">Top 30 List of Companies in PSEi 2020</a></strong></li></ul>
+
+
+
+<blockquote class="wp-block-quote"><p style="text-align: left;"><strong>Don’t be too overwhelmed. Have your favorite frappe to absorb each knowledge you learn.”</strong></p></blockquote>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-full"><img loading="lazy" width="500" height="500" src="https://i1.wp.com/philpad.com/wp-content/uploads/2014/09/stock-market-tutorial-philippines.jpg?resize=500%2C500&amp;ssl=1" alt="stock market tutorial philippines" class="wp-image-17626 jetpack-lazy-image" data-recalc-dims="1" data-lazy-srcset="https://i1.wp.com/philpad.com/wp-content/uploads/2014/09/stock-market-tutorial-philippines.jpg?w=500&amp;ssl=1 500w, https://i1.wp.com/philpad.com/wp-content/uploads/2014/09/stock-market-tutorial-philippines.jpg?resize=150%2C150&amp;ssl=1 150w, https://i1.wp.com/philpad.com/wp-content/uploads/2014/09/stock-market-tutorial-philippines.jpg?resize=300%2C300&amp;ssl=1 300w, https://i1.wp.com/philpad.com/wp-content/uploads/2014/09/stock-market-tutorial-philippines.jpg?resize=100%2C100&amp;ssl=1 100w" data-lazy-sizes="(max-width: 500px) 100vw, 500px" data-lazy-src="https://i1.wp.com/philpad.com/wp-content/uploads/2014/09/stock-market-tutorial-philippines.jpg?resize=500%2C500&amp;is-pending-load=1#038;ssl=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><noscript><img loading="lazy" width="500" height="500" src="https://i1.wp.com/philpad.com/wp-content/uploads/2014/09/stock-market-tutorial-philippines.jpg?resize=500%2C500&#038;ssl=1" alt="stock market tutorial philippines" class="wp-image-17626" srcset="https://i1.wp.com/philpad.com/wp-content/uploads/2014/09/stock-market-tutorial-philippines.jpg?w=500&amp;ssl=1 500w, https://i1.wp.com/philpad.com/wp-content/uploads/2014/09/stock-market-tutorial-philippines.jpg?resize=150%2C150&amp;ssl=1 150w, https://i1.wp.com/philpad.com/wp-content/uploads/2014/09/stock-market-tutorial-philippines.jpg?resize=300%2C300&amp;ssl=1 300w, https://i1.wp.com/philpad.com/wp-content/uploads/2014/09/stock-market-tutorial-philippines.jpg?resize=100%2C100&amp;ssl=1 100w" sizes="(max-width: 500px) 100vw, 500px" data-recalc-dims="1" /></noscript></figure></div>
+
+
+
+<ul><li><strong><a href="https://philpad.com/how-to-use-fundamental-analysis-to-pick-stocks-to-buy/" target="_blank" rel="noopener noreferrer">How to use Fundamental Analysis to pick Stocks to buy</a></strong></li><li><a href="https://philpad.com/why-i-use-magic-10-strategy-investing-in-the-stock-market/" target="_blank" rel="noopener noreferrer"><strong>Why I use Magic 10 Strategy Investing in the Stock Market</strong></a></li><li style="text-align: justify;"><strong><a href="https://dailypik.com/how-to-flip-stocks-to-build-millions-and-earn-more-money/" target="_blank" rel="noopener noreferrer">How to Flip Stocks to Build Millions and Earn More Money</a></strong></li></ul>
+
+
+
+<p><strong>BONUS:</strong></p>
+
+
+
+<ul><li><strong><a rel="noopener noreferrer" href="https://dailypik.com/stocks-picks/" target="_blank">Magic 10 Stock Picks</a></strong></li><li><strong><a rel="noopener noreferrer" href="https://dailypik.com/undervalued-stocks-in-the-philippines-latest-list/" target="_blank">Undervalued Stocks in the Philippines</a></strong></li><li><strong><a rel="noopener noreferrer" href="https://dailypik.com/best-blue-chip-stocks-in-the-philippines/" target="_blank">Best Blue Chip Stocks in the Philippines</a></strong></li><li><a rel="noopener noreferrer" href="https://dailypik.com/psei-stocks-latest-list/" target="_blank"><strong>PSEI Stock Picks</strong></a></li><li><strong><a rel="noreferrer noopener" aria-label="How to Invest Facebook, Google, Apple Stocks in the Philippines (opens in a new tab)" href="https://dailypik.com/invest-facebook-google-apple-stocks-philippines/" target="_blank">How to Invest Facebook, Google, Apple Stocks in the Philippines</a></strong></li></ul>
+
+
+
+<p>I suggest you <strong>BOOKMARK</strong> this page so you can easily use and return to this page. Because I’m going to add more posts about this series of guides and tutorials this week.</p>
+
+
+
+<p>Don’t know how to bookmark? Just find and tap the <strong>star icon</strong> in your web browser. You can also <a href="http://feedburner.google.com/fb/a/mailverify?uri=Philpad&amp;loc=en_US" target="_blank" rel="noopener noreferrer"><strong>SUBSCRIBE</strong></a> here for free so you will never miss our next posts.<span id="ezoic-pub-ad-placeholder-114" class="ezoic-adpicker-ad"></span><span style='background:0 0 !important;display:flex !important;float:none;justify-content:space-between;margin-bottom:15px !important;margin-left:auto !important;margin-right:auto !important;margin-top:15px !important;min-height:250px;min-width:580px;text-align:center !important;width:580px;' class='ezoic-ad box-4 adtester-container adtester-container-114 ezoic-ad-adaptive' data-ez-name='philpad_com-box-4'><span style='display:block !important;float:none;margin-bottom:15px !important;margin-left:0px !important;margin-right:0px !important;margin-top:15px !important;min-height:250px;min-width:250px;text-align:center !important;' class='ezoic-ad box-4 adtester-container adtester-container-114' data-ez-name='philpad_com-box-4'><span id='div-gpt-ad-philpad_com-box-4-0' ezaw='290' ezah='250' style='position:relative;z-index:0;display:inline-block;min-height:250px;min-width:290px;' class='ezoic-ad'><script data-ezscrex='false' data-cfasync='false' type='text/javascript' style='display:none;'>eval(ez_write_tag([[250,250],'philpad_com-box-4','ezslot_3',114,'0','0']));</script></span></span><span style='display:block !important;float:none;margin-bottom:15px !important;margin-left:0px !important;margin-right:0px !important;margin-top:15px !important;min-height:250px;min-width:250px;text-align:center !important;' class='ezoic-ad box-4 adtester-container adtester-container-114' data-ez-name='philpad_com-box-4'><span id='div-gpt-ad-philpad_com-box-4-0_1' ezaw='290' ezah='250' style='position:relative;z-index:0;display:inline-block;min-height:250px;min-width:290px;' class='ezoic-ad'><script data-ezscrex='false' data-cfasync='false' type='text/javascript' style='display:none;'>eval(ez_write_tag([[250,250],'philpad_com-box-4','ezslot_4',114,'0','1']));</script></span></span></span></p>
+<span id="ezoic-pub-ad-placeholder-118" class="ezoic-adpicker-ad"></span><span style='display:block !important;float:none;margin-bottom:15px !important;margin-left:0px !important;margin-right:0px !important;margin-top:15px !important;min-height:250px;min-width:250px;text-align:center !important;' class='ezoic-ad large-mobile-banner-1 adtester-container adtester-container-118' data-ez-name='philpad_com-large-mobile-banner-1'><span id='div-gpt-ad-philpad_com-large-mobile-banner-1-0' ezaw='250' ezah='250' style='position:relative;z-index:0;display:inline-block;width:100%;max-width:1200px;margin-left:auto !important;margin-right:auto !important;min-height:250px;min-width:250px;' class='ezoic-ad ezoic-adl'><script data-ezscrex='false' data-cfasync='false' type='text/javascript' style='display:none;'>eval(ez_write_tag([[250,250],'philpad_com-large-mobile-banner-1','ezslot_8',118,'0','0']));</script></span></span></div></article></main><aside class="sidebar sidebar-primary widget-area" role="complementary" aria-label="Primary Sidebar" id="genesis-sidebar-primary"><h2 class="genesis-sidebar-title screen-reader-text">Primary Sidebar</h2><section id="featured-post-2" class="widget featured-content featuredpost"><div class="widget-wrap"><article class="post-27424 post type-post status-publish format-standard has-post-thumbnail category-gadgets entry" aria-label="7 Reasons to Adopt a Cloud-based E-commerce System in The New Normal"><a href="https://philpad.com/cloud-based-business/" class="alignleft" aria-hidden="true" tabindex="-1"><img width="150" height="150" src="https://i0.wp.com/philpad.com/wp-content/uploads/2020/08/cloud-based-ecommerce-system-new-normal.jpg?resize=150%2C150&amp;ssl=1" class="entry-image attachment-post jetpack-lazy-image" alt="cloud based ecommerce system new normal" loading="lazy" data-lazy-srcset="https://i0.wp.com/philpad.com/wp-content/uploads/2020/08/cloud-based-ecommerce-system-new-normal.jpg?resize=150%2C150&amp;ssl=1 150w, https://i0.wp.com/philpad.com/wp-content/uploads/2020/08/cloud-based-ecommerce-system-new-normal.jpg?resize=600%2C600&amp;ssl=1 600w, https://i0.wp.com/philpad.com/wp-content/uploads/2020/08/cloud-based-ecommerce-system-new-normal.jpg?zoom=2&amp;resize=150%2C150&amp;ssl=1 300w, https://i0.wp.com/philpad.com/wp-content/uploads/2020/08/cloud-based-ecommerce-system-new-normal.jpg?zoom=3&amp;resize=150%2C150&amp;ssl=1 450w" data-lazy-sizes="(max-width: 150px) 100vw, 150px" data-lazy-src="https://i0.wp.com/philpad.com/wp-content/uploads/2020/08/cloud-based-ecommerce-system-new-normal.jpg?resize=150%2C150&amp;ssl=1&amp;is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></a><header class="entry-header"><h4 class="entry-title"><span id="ezoic-pub-ad-placeholder-122" class="ezoic-adpicker-ad"></span><span style='display:block !important;float:none;margin-bottom:20px !important;margin-left:0px !important;margin-right:0px !important;margin-top:15px !important;min-height:1050px;min-width:300px;text-align:center !important;' class='ezoic-ad box-1 adtester-container adtester-container-122' data-ez-name='philpad_com-box-1'><span id='div-gpt-ad-philpad_com-box-1-0' ezaw='300' ezah='1050' style='position:relative;z-index:0;display:inline-block;width:100%;max-width:1200px;margin-left:auto !important;margin-right:auto !important;min-height:1050px;min-width:300px;' class='ezoic-ad ezoic-adl'><script data-ezscrex='false' data-cfasync='false' type='text/javascript' style='display:none;'>eval(ez_write_tag([[300,1050],'philpad_com-box-1','ezslot_7',122,'0','0']));</script></span><span style='width:300px;display:block;height:14px;margin:auto' class='reportline'><span style='text-align:center;font-size: smaller;float:left;line-height:normal;'><a href='https://www.ezoic.com/what-is-ezoic/' target='_blank' rel='noopener noreferrer nofollow' style='cursor:pointer'/><img src='https://go.ezoic.net/utilcave_com/img/ezoic.png' style='height:12px !important; padding:2px !important; border:0px !important; cursor:pointer !important; width: 58px !important; margin:0 !important; box-sizing: content-box !important;'/></a></span><span class="ez-report-ad-button" name="?pageview_id=b6745c45-d2ab-45df-671b-6eaa9a77965b&ad_position_id=122&impression_group_id=philpad_com-box-1/2020-08-26/100939&ad_size=300x1050&domain_id=3788&url=https://philpad.com/stock-market-tutorials-philippines-complete-guide/" style='cursor: pointer!important; font-size:12px !important;color: #a5a5a5 ;float:right;text-decoration:none !important;font-family:arial !important;line-height:normal;'>report this ad</span></span></span><a href="https://philpad.com/cloud-based-business/">7 Reasons to Adopt a Cloud-based E-commerce System in The New Normal</a></h4></header></article><article class="post-27389 post type-post status-publish format-standard has-post-thumbnail category-web tag-philhealth entry" aria-label="How to Get Philhealth MDR Form Online (in 2 Minutes)"><a href="https://philpad.com/philhealth-mdr-form-online/" class="alignleft" aria-hidden="true" tabindex="-1"><img width="150" height="150" src="https://i0.wp.com/philpad.com/wp-content/uploads/2020/08/how-to-get-philhealth-mdr-online.jpg?resize=150%2C150&amp;ssl=1" class="entry-image attachment-post jetpack-lazy-image" alt="how to get philhealth mdr online" loading="lazy" data-lazy-srcset="https://i0.wp.com/philpad.com/wp-content/uploads/2020/08/how-to-get-philhealth-mdr-online.jpg?resize=150%2C150&amp;ssl=1 150w, https://i0.wp.com/philpad.com/wp-content/uploads/2020/08/how-to-get-philhealth-mdr-online.jpg?resize=600%2C600&amp;ssl=1 600w, https://i0.wp.com/philpad.com/wp-content/uploads/2020/08/how-to-get-philhealth-mdr-online.jpg?zoom=2&amp;resize=150%2C150&amp;ssl=1 300w, https://i0.wp.com/philpad.com/wp-content/uploads/2020/08/how-to-get-philhealth-mdr-online.jpg?zoom=3&amp;resize=150%2C150&amp;ssl=1 450w" data-lazy-sizes="(max-width: 150px) 100vw, 150px" data-lazy-src="https://i0.wp.com/philpad.com/wp-content/uploads/2020/08/how-to-get-philhealth-mdr-online.jpg?resize=150%2C150&amp;ssl=1&amp;is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></a><header class="entry-header"><h4 class="entry-title"><a href="https://philpad.com/philhealth-mdr-form-online/">How to Get Philhealth MDR Form Online (in 2 Minutes)</a></h4></header></article><article class="post-27368 post type-post status-publish format-standard has-post-thumbnail category-web entry" aria-label="How to Get or Renew NBI Clearance Abroad and Outside the Philippines"><a href="https://philpad.com/nbi-clearance-abroad/" class="alignleft" aria-hidden="true" tabindex="-1"><img width="150" height="150" src="https://i2.wp.com/philpad.com/wp-content/uploads/2020/08/how-to-get-nbi-clearance-abroad-outside-philippines.jpg?resize=150%2C150&amp;ssl=1" class="entry-image attachment-post jetpack-lazy-image" alt="how to get nbi clearance abroad" loading="lazy" data-lazy-srcset="https://i2.wp.com/philpad.com/wp-content/uploads/2020/08/how-to-get-nbi-clearance-abroad-outside-philippines.jpg?resize=150%2C150&amp;ssl=1 150w, https://i2.wp.com/philpad.com/wp-content/uploads/2020/08/how-to-get-nbi-clearance-abroad-outside-philippines.jpg?resize=600%2C600&amp;ssl=1 600w, https://i2.wp.com/philpad.com/wp-content/uploads/2020/08/how-to-get-nbi-clearance-abroad-outside-philippines.jpg?zoom=2&amp;resize=150%2C150&amp;ssl=1 300w, https://i2.wp.com/philpad.com/wp-content/uploads/2020/08/how-to-get-nbi-clearance-abroad-outside-philippines.jpg?zoom=3&amp;resize=150%2C150&amp;ssl=1 450w" data-lazy-sizes="(max-width: 150px) 100vw, 150px" data-lazy-src="https://i2.wp.com/philpad.com/wp-content/uploads/2020/08/how-to-get-nbi-clearance-abroad-outside-philippines.jpg?resize=150%2C150&amp;ssl=1&amp;is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></a><header class="entry-header"><h4 class="entry-title"><a href="https://philpad.com/nbi-clearance-abroad/">How to Get or Renew NBI Clearance Abroad and Outside the Philippines</a></h4></header></article><article class="post-27298 post type-post status-publish format-standard has-post-thumbnail category-gadgets entry" aria-label="How to Extract Files on Mac Easily and Fast"><a href="https://philpad.com/extract-files-mac/" class="alignleft" aria-hidden="true" tabindex="-1"><img width="150" height="150" src="https://i1.wp.com/philpad.com/wp-content/uploads/2020/07/how-to-extract-files-on-mac.jpg?resize=150%2C150&amp;ssl=1" class="entry-image attachment-post jetpack-lazy-image" alt="how to extract files on mac" loading="lazy" data-lazy-srcset="https://i1.wp.com/philpad.com/wp-content/uploads/2020/07/how-to-extract-files-on-mac.jpg?resize=150%2C150&amp;ssl=1 150w, https://i1.wp.com/philpad.com/wp-content/uploads/2020/07/how-to-extract-files-on-mac.jpg?resize=600%2C600&amp;ssl=1 600w, https://i1.wp.com/philpad.com/wp-content/uploads/2020/07/how-to-extract-files-on-mac.jpg?zoom=2&amp;resize=150%2C150&amp;ssl=1 300w, https://i1.wp.com/philpad.com/wp-content/uploads/2020/07/how-to-extract-files-on-mac.jpg?zoom=3&amp;resize=150%2C150&amp;ssl=1 450w" data-lazy-sizes="(max-width: 150px) 100vw, 150px" data-lazy-src="https://i1.wp.com/philpad.com/wp-content/uploads/2020/07/how-to-extract-files-on-mac.jpg?resize=150%2C150&amp;ssl=1&amp;is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></a><header class="entry-header"><h4 class="entry-title"><a href="https://philpad.com/extract-files-mac/">How to Extract Files on Mac Easily and Fast</a></h4></header></article><article class="post-27249 post type-post status-publish format-standard has-post-thumbnail category-education entry" aria-label="Complete List of Presidents of the Philippines – Achievements and Contributions"><a href="https://philpad.com/presidents-philippines-achievements-contributions/" class="alignleft" aria-hidden="true" tabindex="-1"><img width="150" height="150" src="https://i2.wp.com/philpad.com/wp-content/uploads/2020/07/presidents-of-the-philippines-achievements-contributions.jpg?resize=150%2C150&amp;ssl=1" class="entry-image attachment-post jetpack-lazy-image" alt="presidents of the philippines achievements contributions" loading="lazy" data-lazy-srcset="https://i2.wp.com/philpad.com/wp-content/uploads/2020/07/presidents-of-the-philippines-achievements-contributions.jpg?resize=150%2C150&amp;ssl=1 150w, https://i2.wp.com/philpad.com/wp-content/uploads/2020/07/presidents-of-the-philippines-achievements-contributions.jpg?resize=75%2C75&amp;ssl=1 75w, https://i2.wp.com/philpad.com/wp-content/uploads/2020/07/presidents-of-the-philippines-achievements-contributions.jpg?resize=600%2C600&amp;ssl=1 600w, https://i2.wp.com/philpad.com/wp-content/uploads/2020/07/presidents-of-the-philippines-achievements-contributions.jpg?zoom=2&amp;resize=150%2C150&amp;ssl=1 300w, https://i2.wp.com/philpad.com/wp-content/uploads/2020/07/presidents-of-the-philippines-achievements-contributions.jpg?zoom=3&amp;resize=150%2C150&amp;ssl=1 450w" data-lazy-sizes="(max-width: 150px) 100vw, 150px" data-lazy-src="https://i2.wp.com/philpad.com/wp-content/uploads/2020/07/presidents-of-the-philippines-achievements-contributions.jpg?resize=150%2C150&amp;ssl=1&amp;is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></a><header class="entry-header"><h4 class="entry-title"><a href="https://philpad.com/presidents-philippines-achievements-contributions/">Complete List of Presidents of the Philippines – Achievements and Contributions</a></h4></header></article><article class="post-27210 post type-post status-publish format-standard has-post-thumbnail category-tax entry" aria-label="How to Pay Tax Online in the Philippines in 2020 – Complete Guide"><a href="https://philpad.com/pay-tax-online-philippines/" class="alignleft" aria-hidden="true" tabindex="-1"><img width="150" height="150" src="https://i2.wp.com/philpad.com/wp-content/uploads/2020/06/how-to-pay-tax-online-philippines.jpg?resize=150%2C150&amp;ssl=1" class="entry-image attachment-post jetpack-lazy-image" alt="how to pay tax online philippines" loading="lazy" data-lazy-srcset="https://i2.wp.com/philpad.com/wp-content/uploads/2020/06/how-to-pay-tax-online-philippines.jpg?resize=150%2C150&amp;ssl=1 150w, https://i2.wp.com/philpad.com/wp-content/uploads/2020/06/how-to-pay-tax-online-philippines.jpg?resize=75%2C75&amp;ssl=1 75w, https://i2.wp.com/philpad.com/wp-content/uploads/2020/06/how-to-pay-tax-online-philippines.jpg?resize=600%2C600&amp;ssl=1 600w, https://i2.wp.com/philpad.com/wp-content/uploads/2020/06/how-to-pay-tax-online-philippines.jpg?zoom=2&amp;resize=150%2C150&amp;ssl=1 300w, https://i2.wp.com/philpad.com/wp-content/uploads/2020/06/how-to-pay-tax-online-philippines.jpg?zoom=3&amp;resize=150%2C150&amp;ssl=1 450w" data-lazy-sizes="(max-width: 150px) 100vw, 150px" data-lazy-src="https://i2.wp.com/philpad.com/wp-content/uploads/2020/06/how-to-pay-tax-online-philippines.jpg?resize=150%2C150&amp;ssl=1&amp;is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></a><header class="entry-header"><h4 class="entry-title"><a href="https://philpad.com/pay-tax-online-philippines/">How to Pay Tax Online in the Philippines in 2020 – Complete Guide</a></h4></header></article><article class="post-27190 post type-post status-publish format-standard has-post-thumbnail category-gadgets entry" aria-label="iPhone SE Price in the Philippines – Top 6 Reasons Why You Should Buy It"><a href="https://philpad.com/iphone-se-price-philippines/" class="alignleft" aria-hidden="true" tabindex="-1"><img width="150" height="150" src="https://i1.wp.com/philpad.com/wp-content/uploads/2020/06/iphone-se-2020-price-philippines.jpg?resize=150%2C150&amp;ssl=1" class="entry-image attachment-post jetpack-lazy-image" alt="iphone se 2020 price philippines" loading="lazy" data-lazy-srcset="https://i1.wp.com/philpad.com/wp-content/uploads/2020/06/iphone-se-2020-price-philippines.jpg?resize=150%2C150&amp;ssl=1 150w, https://i1.wp.com/philpad.com/wp-content/uploads/2020/06/iphone-se-2020-price-philippines.jpg?resize=75%2C75&amp;ssl=1 75w, https://i1.wp.com/philpad.com/wp-content/uploads/2020/06/iphone-se-2020-price-philippines.jpg?resize=600%2C600&amp;ssl=1 600w, https://i1.wp.com/philpad.com/wp-content/uploads/2020/06/iphone-se-2020-price-philippines.jpg?zoom=2&amp;resize=150%2C150&amp;ssl=1 300w, https://i1.wp.com/philpad.com/wp-content/uploads/2020/06/iphone-se-2020-price-philippines.jpg?zoom=3&amp;resize=150%2C150&amp;ssl=1 450w" data-lazy-sizes="(max-width: 150px) 100vw, 150px" data-lazy-src="https://i1.wp.com/philpad.com/wp-content/uploads/2020/06/iphone-se-2020-price-philippines.jpg?resize=150%2C150&amp;ssl=1&amp;is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></a><header class="entry-header"><h4 class="entry-title"><a href="https://philpad.com/iphone-se-price-philippines/">iPhone SE Price in the Philippines – Top 6 Reasons Why You Should Buy It</a></h4></header></article></div></section>
+<section id="featured-post-8" class="widget featured-content featuredpost"><div class="widget-wrap"><article class="post-27173 post type-post status-publish format-standard has-post-thumbnail category-gadgets entry" aria-label="How to Purchase Gaming Pins Using PayMaya"><a href="https://philpad.com/gaming-pins-paymaya/" class="alignleft" aria-hidden="true" tabindex="-1"><img width="150" height="150" src="https://i0.wp.com/philpad.com/wp-content/uploads/2020/06/how-to-purchase-gaming-pins-using-paymaya.jpg?resize=150%2C150&amp;ssl=1" class="entry-image attachment-post jetpack-lazy-image" alt="how to purchase gaming pins using paymaya" loading="lazy" data-lazy-srcset="https://i0.wp.com/philpad.com/wp-content/uploads/2020/06/how-to-purchase-gaming-pins-using-paymaya.jpg?resize=150%2C150&amp;ssl=1 150w, https://i0.wp.com/philpad.com/wp-content/uploads/2020/06/how-to-purchase-gaming-pins-using-paymaya.jpg?resize=75%2C75&amp;ssl=1 75w, https://i0.wp.com/philpad.com/wp-content/uploads/2020/06/how-to-purchase-gaming-pins-using-paymaya.jpg?resize=600%2C600&amp;ssl=1 600w, https://i0.wp.com/philpad.com/wp-content/uploads/2020/06/how-to-purchase-gaming-pins-using-paymaya.jpg?zoom=2&amp;resize=150%2C150&amp;ssl=1 300w, https://i0.wp.com/philpad.com/wp-content/uploads/2020/06/how-to-purchase-gaming-pins-using-paymaya.jpg?zoom=3&amp;resize=150%2C150&amp;ssl=1 450w" data-lazy-sizes="(max-width: 150px) 100vw, 150px" data-lazy-src="https://i0.wp.com/philpad.com/wp-content/uploads/2020/06/how-to-purchase-gaming-pins-using-paymaya.jpg?resize=150%2C150&amp;ssl=1&amp;is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></a><header class="entry-header"><h4 class="entry-title"><a href="https://philpad.com/gaming-pins-paymaya/">How to Purchase Gaming Pins Using PayMaya</a></h4></header></article><article class="post-27131 post type-post status-publish format-standard has-post-thumbnail category-web entry" aria-label="8 Effective Ways How to Earn Money Using TikTok in 2020"><a href="https://philpad.com/earn-money-tiktok/" class="alignleft" aria-hidden="true" tabindex="-1"><img width="150" height="150" src="https://i0.wp.com/philpad.com/wp-content/uploads/2020/06/how-to-earn-money-on-tiktok.jpg?resize=150%2C150&amp;ssl=1" class="entry-image attachment-post jetpack-lazy-image" alt="how to earn money on tiktok" loading="lazy" data-lazy-srcset="https://i0.wp.com/philpad.com/wp-content/uploads/2020/06/how-to-earn-money-on-tiktok.jpg?resize=150%2C150&amp;ssl=1 150w, https://i0.wp.com/philpad.com/wp-content/uploads/2020/06/how-to-earn-money-on-tiktok.jpg?resize=75%2C75&amp;ssl=1 75w, https://i0.wp.com/philpad.com/wp-content/uploads/2020/06/how-to-earn-money-on-tiktok.jpg?resize=600%2C600&amp;ssl=1 600w, https://i0.wp.com/philpad.com/wp-content/uploads/2020/06/how-to-earn-money-on-tiktok.jpg?zoom=2&amp;resize=150%2C150&amp;ssl=1 300w, https://i0.wp.com/philpad.com/wp-content/uploads/2020/06/how-to-earn-money-on-tiktok.jpg?zoom=3&amp;resize=150%2C150&amp;ssl=1 450w" data-lazy-sizes="(max-width: 150px) 100vw, 150px" data-lazy-src="https://i0.wp.com/philpad.com/wp-content/uploads/2020/06/how-to-earn-money-on-tiktok.jpg?resize=150%2C150&amp;ssl=1&amp;is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></a><header class="entry-header"><h4 class="entry-title"><a href="https://philpad.com/earn-money-tiktok/">8 Effective Ways How to Earn Money Using TikTok in 2020</a></h4></header></article><article class="post-27053 post type-post status-publish format-standard has-post-thumbnail category-jobs entry" aria-label="Top 6 Best Accounting and Auditing Firms in the Philippines in 2020"><a href="https://philpad.com/best-accounting-firms-philippines/" class="alignleft" aria-hidden="true" tabindex="-1"><img width="150" height="150" src="https://i2.wp.com/philpad.com/wp-content/uploads/2020/05/best-accounting-and-auditing-firms-philippines.jpg?resize=150%2C150&amp;ssl=1" class="entry-image attachment-post jetpack-lazy-image" alt="best accounting and auditing firms philippines" loading="lazy" data-lazy-srcset="https://i2.wp.com/philpad.com/wp-content/uploads/2020/05/best-accounting-and-auditing-firms-philippines.jpg?w=1200&amp;ssl=1 1200w, https://i2.wp.com/philpad.com/wp-content/uploads/2020/05/best-accounting-and-auditing-firms-philippines.jpg?resize=300%2C300&amp;ssl=1 300w, https://i2.wp.com/philpad.com/wp-content/uploads/2020/05/best-accounting-and-auditing-firms-philippines.jpg?resize=1024%2C1024&amp;ssl=1 1024w, https://i2.wp.com/philpad.com/wp-content/uploads/2020/05/best-accounting-and-auditing-firms-philippines.jpg?resize=150%2C150&amp;ssl=1 150w, https://i2.wp.com/philpad.com/wp-content/uploads/2020/05/best-accounting-and-auditing-firms-philippines.jpg?resize=75%2C75&amp;ssl=1 75w, https://i2.wp.com/philpad.com/wp-content/uploads/2020/05/best-accounting-and-auditing-firms-philippines.jpg?resize=600%2C600&amp;ssl=1 600w" data-lazy-sizes="(max-width: 150px) 100vw, 150px" data-lazy-src="https://i2.wp.com/philpad.com/wp-content/uploads/2020/05/best-accounting-and-auditing-firms-philippines.jpg?resize=150%2C150&amp;ssl=1&amp;is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></a><header class="entry-header"><h4 class="entry-title"><a href="https://philpad.com/best-accounting-firms-philippines/">Top 6 Best Accounting and Auditing Firms in the Philippines in 2020</a></h4></header></article><article class="post-26982 post type-post status-publish format-standard has-post-thumbnail category-jobs entry" aria-label="Top 15 Best BPO Companies in the Philippines in 2020"><a href="https://philpad.com/best-bpo-companies-philippines/" class="alignleft" aria-hidden="true" tabindex="-1"><img width="150" height="150" src="https://i2.wp.com/philpad.com/wp-content/uploads/2020/04/best-bpo-companies-philippines.jpg?resize=150%2C150&amp;ssl=1" class="entry-image attachment-post jetpack-lazy-image" alt="best bpo companies philippines" loading="lazy" data-lazy-srcset="https://i2.wp.com/philpad.com/wp-content/uploads/2020/04/best-bpo-companies-philippines.jpg?resize=150%2C150&amp;ssl=1 150w, https://i2.wp.com/philpad.com/wp-content/uploads/2020/04/best-bpo-companies-philippines.jpg?resize=75%2C75&amp;ssl=1 75w, https://i2.wp.com/philpad.com/wp-content/uploads/2020/04/best-bpo-companies-philippines.jpg?resize=600%2C600&amp;ssl=1 600w, https://i2.wp.com/philpad.com/wp-content/uploads/2020/04/best-bpo-companies-philippines.jpg?zoom=2&amp;resize=150%2C150&amp;ssl=1 300w, https://i2.wp.com/philpad.com/wp-content/uploads/2020/04/best-bpo-companies-philippines.jpg?zoom=3&amp;resize=150%2C150&amp;ssl=1 450w" data-lazy-sizes="(max-width: 150px) 100vw, 150px" data-lazy-src="https://i2.wp.com/philpad.com/wp-content/uploads/2020/04/best-bpo-companies-philippines.jpg?resize=150%2C150&amp;ssl=1&amp;is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></a><header class="entry-header"><h4 class="entry-title"><a href="https://philpad.com/best-bpo-companies-philippines/">Top 15 Best BPO Companies in the Philippines in 2020</a></h4></header></article><article class="post-26941 post type-post status-publish format-standard has-post-thumbnail category-web entry" aria-label="How to Add Contact Form in WordPress Page – Easy Guide in 2020"><a href="https://philpad.com/add-contact-form-wordpress/" class="alignleft" aria-hidden="true" tabindex="-1"><img width="150" height="150" src="https://i2.wp.com/philpad.com/wp-content/uploads/2020/04/how-to-add-contact-form-in-wordpress-page.jpg?resize=150%2C150&amp;ssl=1" class="entry-image attachment-post jetpack-lazy-image" alt="how to add contact form in wordpress page" loading="lazy" data-lazy-srcset="https://i2.wp.com/philpad.com/wp-content/uploads/2020/04/how-to-add-contact-form-in-wordpress-page.jpg?w=1200&amp;ssl=1 1200w, https://i2.wp.com/philpad.com/wp-content/uploads/2020/04/how-to-add-contact-form-in-wordpress-page.jpg?resize=300%2C300&amp;ssl=1 300w, https://i2.wp.com/philpad.com/wp-content/uploads/2020/04/how-to-add-contact-form-in-wordpress-page.jpg?resize=1024%2C1024&amp;ssl=1 1024w, https://i2.wp.com/philpad.com/wp-content/uploads/2020/04/how-to-add-contact-form-in-wordpress-page.jpg?resize=150%2C150&amp;ssl=1 150w, https://i2.wp.com/philpad.com/wp-content/uploads/2020/04/how-to-add-contact-form-in-wordpress-page.jpg?resize=75%2C75&amp;ssl=1 75w, https://i2.wp.com/philpad.com/wp-content/uploads/2020/04/how-to-add-contact-form-in-wordpress-page.jpg?resize=600%2C600&amp;ssl=1 600w" data-lazy-sizes="(max-width: 150px) 100vw, 150px" data-lazy-src="https://i2.wp.com/philpad.com/wp-content/uploads/2020/04/how-to-add-contact-form-in-wordpress-page.jpg?resize=150%2C150&amp;ssl=1&amp;is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></a><header class="entry-header"><h4 class="entry-title"><a href="https://philpad.com/add-contact-form-wordpress/">How to Add Contact Form in WordPress Page – Easy Guide in 2020</a></h4></header></article><article class="post-26893 post type-post status-publish format-standard has-post-thumbnail category-web entry" aria-label="How to Pasaload in Smart, Globe, TM, TNT, Sun"><a href="https://philpad.com/how-to-pasaload/" class="alignleft" aria-hidden="true" tabindex="-1"><img width="150" height="150" src="https://i1.wp.com/philpad.com/wp-content/uploads/2020/03/how-to-pasaload-smart-globe-sun-tm-tnt.jpg?resize=150%2C150&amp;ssl=1" class="entry-image attachment-post jetpack-lazy-image" alt="how to pasaload smart globe sun tm tnt" loading="lazy" data-lazy-srcset="https://i1.wp.com/philpad.com/wp-content/uploads/2020/03/how-to-pasaload-smart-globe-sun-tm-tnt.jpg?w=1200&amp;ssl=1 1200w, https://i1.wp.com/philpad.com/wp-content/uploads/2020/03/how-to-pasaload-smart-globe-sun-tm-tnt.jpg?resize=300%2C300&amp;ssl=1 300w, https://i1.wp.com/philpad.com/wp-content/uploads/2020/03/how-to-pasaload-smart-globe-sun-tm-tnt.jpg?resize=1024%2C1024&amp;ssl=1 1024w, https://i1.wp.com/philpad.com/wp-content/uploads/2020/03/how-to-pasaload-smart-globe-sun-tm-tnt.jpg?resize=150%2C150&amp;ssl=1 150w, https://i1.wp.com/philpad.com/wp-content/uploads/2020/03/how-to-pasaload-smart-globe-sun-tm-tnt.jpg?resize=75%2C75&amp;ssl=1 75w, https://i1.wp.com/philpad.com/wp-content/uploads/2020/03/how-to-pasaload-smart-globe-sun-tm-tnt.jpg?resize=600%2C600&amp;ssl=1 600w" data-lazy-sizes="(max-width: 150px) 100vw, 150px" data-lazy-src="https://i1.wp.com/philpad.com/wp-content/uploads/2020/03/how-to-pasaload-smart-globe-sun-tm-tnt.jpg?resize=150%2C150&amp;ssl=1&amp;is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></a><header class="entry-header"><h4 class="entry-title"><a href="https://philpad.com/how-to-pasaload/">How to Pasaload in Smart, Globe, TM, TNT, Sun</a></h4></header></article><article class="post-26839 post type-post status-publish format-standard has-post-thumbnail category-travel entry" aria-label="Philippine Airlines Promo 2020: How to Book Cheap Tickets Successfully"><a href="https://philpad.com/philippine-airlines-promo/" class="alignleft" aria-hidden="true" tabindex="-1"><img width="150" height="150" src="https://i0.wp.com/philpad.com/wp-content/uploads/2020/03/philippine-airlines-promo-2020.jpg?resize=150%2C150&amp;ssl=1" class="entry-image attachment-post jetpack-lazy-image" alt="philippine airlines promo 2020" loading="lazy" data-lazy-srcset="https://i0.wp.com/philpad.com/wp-content/uploads/2020/03/philippine-airlines-promo-2020.jpg?w=1200&amp;ssl=1 1200w, https://i0.wp.com/philpad.com/wp-content/uploads/2020/03/philippine-airlines-promo-2020.jpg?resize=300%2C300&amp;ssl=1 300w, https://i0.wp.com/philpad.com/wp-content/uploads/2020/03/philippine-airlines-promo-2020.jpg?resize=1024%2C1024&amp;ssl=1 1024w, https://i0.wp.com/philpad.com/wp-content/uploads/2020/03/philippine-airlines-promo-2020.jpg?resize=150%2C150&amp;ssl=1 150w, https://i0.wp.com/philpad.com/wp-content/uploads/2020/03/philippine-airlines-promo-2020.jpg?resize=75%2C75&amp;ssl=1 75w, https://i0.wp.com/philpad.com/wp-content/uploads/2020/03/philippine-airlines-promo-2020.jpg?resize=600%2C600&amp;ssl=1 600w" data-lazy-sizes="(max-width: 150px) 100vw, 150px" data-lazy-src="https://i0.wp.com/philpad.com/wp-content/uploads/2020/03/philippine-airlines-promo-2020.jpg?resize=150%2C150&amp;ssl=1&amp;is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></a><header class="entry-header"><h4 class="entry-title"><a href="https://philpad.com/philippine-airlines-promo/">Philippine Airlines Promo 2020: How to Book Cheap Tickets Successfully</a></h4></header></article></div></section>
+<span id="ezoic-pub-ad-placeholder-108" class="ezoic-adpicker-ad"></span><span style='display:block !important;float:none;margin-bottom:15px !important;margin-left:0px !important;margin-right:0px !important;margin-top:15px !important;min-height:250px;min-width:250px;text-align:center !important;' class='ezoic-ad large-billboard-2 adtester-container adtester-container-108' data-ez-name='philpad_com-large-billboard-2'><span id='div-gpt-ad-philpad_com-large-billboard-2-0' ezaw='250' ezah='250' style='position:relative;z-index:0;display:inline-block;width:100%;max-width:1200px;margin-left:auto !important;margin-right:auto !important;min-height:250px;min-width:250px;' class='ezoic-ad ezoic-adl'><script data-ezscrex='false' data-cfasync='false' type='text/javascript' style='display:none;'>eval(ez_write_tag([[250,250],'philpad_com-large-billboard-2','ezslot_0',108,'0','0']));</script></span><span style='width:250px;display:block;height:14px;margin:auto' class='reportline'><span style='text-align:center;font-size: smaller;float:left;line-height:normal;'><a href='https://www.ezoic.com/what-is-ezoic/' target='_blank' rel='noopener noreferrer nofollow' style='cursor:pointer'/><img src='https://go.ezoic.net/utilcave_com/img/ezoic.png' style='height:12px !important; padding:2px !important; border:0px !important; cursor:pointer !important; width: 58px !important; margin:0 !important; box-sizing: content-box !important;'/></a></span><span class="ez-report-ad-button" name="?pageview_id=b6745c45-d2ab-45df-671b-6eaa9a77965b&ad_position_id=108&impression_group_id=philpad_com-large-billboard-2/2020-08-26/159789&ad_size=250x250&domain_id=3788&url=https://philpad.com/stock-market-tutorials-philippines-complete-guide/" style='cursor: pointer!important; font-size:12px !important;color: #a5a5a5 ;float:right;text-decoration:none !important;font-family:arial !important;line-height:normal;'>report this ad</span></span></span></aside></div></div><div class="footer-widgets" id="genesis-footer-widgets"><h2 class="genesis-sidebar-title screen-reader-text">Footer</h2><div class="wrap"><div class="widget-area footer-widgets-1 footer-widget-area"><section id="eu_cookie_law_widget-2" class="widget widget_eu_cookie_law_widget"><div class="widget-wrap"><div class="hide-on-button" data-hide-timeout="30" data-consent-expiration="180" id="eu-cookie-law">
+	<form method="post">
+		<input type="submit" value="I ACCEPT" class="accept">
+	</form>
+
+	PHILPAD USES COOKIES TO ENSURE YOU GET THE BEST EXPERIENCE WHILE BROWSING OUR SITE<br>
+<br>
+By continued use, you agree to our Privacy Policy and accept our use of such cookies. For further information, visit our 
+	<a href="https://philpad.com/cookies/">
+		Cookie Policy	</a>
+</div>
+</div></section>
+</div></div></div><footer class="site-footer"><div class="wrap"><p>Copyright © 2020  All rights reserved   |  <a href="https://philpad.com/privacy-policy/" rel="nofollow">Privacy Policy</a>  |  Made with
+<span class="heart">♥</span>
+in the <a href="https://philpad.com/">Philippines</a>  |  <a href="https://philpad.com/about-us">About Us</a>  |  <a href="https://philpad.com/contact-us">Contact Us</a>
+</p></div></footer></div>	<script type="text/javascript">
+		function atomicBlocksShare( url, title, w, h ){
+			var left = ( window.innerWidth / 2 )-( w / 2 );
+			var top  = ( window.innerHeight / 2 )-( h / 2 );
+			return window.open(url, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=600, height=600, top='+top+', left='+left);
+		}
+	</script>
+	<script src='https://philpad.com/wp-content/plugins/jetpack/_inc/build/photon/photon.min.js?ver=20191001' id='jetpack-photon-js'></script>
+<script id='toc-front-js-extra'>
+var tocplus = {"visibility_show":"show","visibility_hide":"hide","width":"100%"};
+</script>
+<script src='https://philpad.com/wp-content/plugins/table-of-contents-plus/front.min.js?ver=2002' id='toc-front-js'></script>
+<script src='https://philpad.com/wp-content/plugins/atomic-blocks/dist/assets/js/dismiss.js?ver=1594953120' id='atomic-blocks-dismiss-js-js'></script>
+<script src='https://philpad.com/wp-includes/js/comment-reply.min.js?ver=5.5' id='comment-reply-js'></script>
+<script src='https://philpad.com/wp-includes/js/hoverIntent.min.js?ver=1.8.1' id='hoverIntent-js'></script>
+<script src='https://philpad.com/wp-content/themes/genesis/lib/js/menu/superfish.min.js?ver=1.7.10' id='superfish-js'></script>
+<script src='https://philpad.com/wp-content/themes/genesis/lib/js/menu/superfish.args.min.js?ver=3.3.3' id='superfish-args-js'></script>
+<script src='https://philpad.com/wp-content/themes/genesis/lib/js/skip-links.min.js?ver=3.3.3' id='skip-links-js'></script>
+<script id='revolution-pro-responsive-menu-js-extra'>
+var genesis_responsive_menu = {"mainMenu":"Menu","menuIconClass":"dashicons-before dashicons-menu","subMenu":"Submenu","subMenuIconClass":"dashicons-before dashicons-arrow-down-alt2","menuClasses":{"combine":[".nav-secondary",".nav-primary"],"others":[]},"combineMethod":"prepend"};
+</script>
+<script src='https://philpad.com/wp-content/themes/revolution-pro/js/responsive-menus.min.js?ver=1.4.0' id='revolution-pro-responsive-menu-js'></script>
+<script src='https://philpad.com/wp-content/themes/revolution-pro/js/smooth-scroll.js?ver=1.4.0' id='revolution-pro-smooth-scroll-js'></script>
+<script id='revolution-pro-sticky-header-js-extra'>
+var studiopressStickyHeaderConfig = {"heightDifference":"30"};
+</script>
+<script src='https://philpad.com/wp-content/themes/revolution-pro/js/sticky-header.js?ver=1.4.0' id='revolution-pro-sticky-header-js'></script>
+<script src='https://philpad.com/wp-content/plugins/jetpack/_inc/build/widgets/eu-cookie-law/eu-cookie-law.min.js?ver=20180522' id='eu-cookie-law-script-js'></script>
+<script src='https://philpad.com/wp-content/plugins/jetpack/_inc/build/lazy-images/js/lazy-images.min.js?ver=8.8.2' id='jetpack-lazy-images-js'></script>
+<script src='https://philpad.com/wp-includes/js/wp-embed.min.js?ver=5.5' id='wp-embed-js'></script>
+<script type='text/javascript' src='https://stats.wp.com/e-202035.js' async='async' defer='defer'></script>
+<script type='text/javascript'>
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:8.8.2',blog:'37378050',post:'16584',tz:'8',srv:'philpad.com'} ]);
+	_stq.push([ 'clickTrackerInit', '37378050', '16584' ]);
+</script>
+	<script id="webpushr-script">
+		(function(w,d, s, id) {w.webpushr=w.webpushr||function(){(w.webpushr.q=w.webpushr.q||[]).push(arguments)};var js, fjs = d.getElementsByTagName(s)[0];js = d.createElement(s); js.id = id;js.src = "https://cdn.webpushr.com/app.min.js";
+		d.body.appendChild(js);}(window,document, 'script', 'webpushr-jssdk'));
+		webpushr('init','BK1bL1UFYdtKyORxj4N4Thxy5wzTx556m7vp7rZIInp_0spKpRzAvrfqVLtIUmLRXrTIN1ckyQAM9ImjKMiDuRM','https://philpad.com/wp-content/plugins/webpushr-web-push-notifications/sdk_files/webpushr-sw.js.php');
+	</script>
+	
+
+		<!-- Ezoic - Anchor Ad - bottom_floating -->
+		<div class="ezmob-footer ezoic-floating-bottom ezo_ad ezmob-footer-desktop" id="ezmobfooter"><center><span id="ezoic-pub-ad-placeholder-125"></span>
+		<!-- Ezoic - Anchor Ad - bottom_floating -->
+		<div class="ezmob-footer ezoic-floating-bottom ezo_ad ezmob-footer-desktop" id="ezmobfooter"><center><span style='display:inline-block;float:none;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-height:90px;min-width:970px;' class='ezoic-ad medrectangle-2 adtester-container adtester-container-125' data-ez-name='philpad_com-medrectangle-2'><span id='div-gpt-ad-philpad_com-medrectangle-2-0' ezaw='970' ezah='90' style='position:relative;z-index:0;display:inline-block;min-height:90px;min-width:970px;' class='ezoic-ad ezoic-adl'><script data-ezscrex='false' data-cfasync='false' type='text/javascript' style='display:none;'>eval(ez_write_tag([[970,90],'philpad_com-medrectangle-2','ezslot_5',125,'0','0']));</script></span></span></center><span class='ezmob-footer-close' onclick="document.getElementById('ezmobfooter').style.display='none';">x</span></div>
+		<!-- End Ezoic - Anchor Ad - bottom_floating -->
+		</center><span class='ezmob-footer-close' onclick="document.getElementById('ezmobfooter').style.display='none';">x</span></div>
+		<!-- End Ezoic - Anchor Ad - bottom_floating -->
+		<script>var __ez_tkn_evnt = function() { if(typeof(_ezaq) != 'undefined'){if(window.ezogtk != "") {__ez.bit.AddAndFire(_ezaq.page_view_id,[new __ezDotData("ext_user_hash",window.ezogtk)]);}}};document.addEventListener("DOMContentLoaded", __ez.queue.addFunc("__ez_tkn_evnt", "__ez_tkn_evnt", event, false, ['/detroitchicago/minneapolis.js','/detroitchicago/memphis.js'], true, true, false, true));</script>
+<script type='text/javascript' style='display:none;' async>__ez.queue.addFile('anchorfix.js', '/ezoic/anchorfix.js?cb=191-1', false, [], true, true, true, false);</script>
+
+		<script type="text/javascript">
+		(function(f,a){function g(b,a,c){b.addEventListener?b.addEventListener(a,c):b.attachEvent("on"+a,function(){c.call(b)})}function k(b){b&&("string"==typeof b["class"]&&b["class"]&&a.getElementById("uglipop_popbox").setAttribute("class",b["class"]),b.keepLayout&&!b["class"]&&a.getElementById("uglipop_popbox").setAttribute("style","position:relative;height:300px;width:300px;background-color:white;opacity:1;"),"string"==typeof b.content&&b.content&&"html"==b.source&&(a.getElementById("uglipop_popbox").innerHTML=b.content),"string"==typeof b.content&&b.content&&"div"==b.source&&(a.getElementById("uglipop_popbox").innerHTML=a.getElementById(b.content).innerHTML));a.getElementById("uglipop_overlay_wrapper").style.display="";a.getElementById("uglipop_overlay").style.display="";a.getElementById("uglipop_content_fixed").style.display=""}function h(){a.getElementById("uglipop_overlay_wrapper").style.display="none";a.getElementById("uglipop_overlay").style.display="none";a.getElementById("uglipop_content_fixed").style.display="none"}g(a,"DOMContentLoaded",function(){var b=a.createElement("div"),e=a.createElement("div"),c=a.createElement("div"),d=a.createElement("div");e.id="uglipop_content_fixed";e.setAttribute("style","position:fixed;top: 50%;left: 50%;transform: translate(-50%, -50%);-webkit-transform: translate(-50%, -50%);-ms-transform: translate(-50%, -50%);opacity:1;z-index:10000000;");c.id="uglipop_popbox";d.id="uglipop_overlay_wrapper";d.setAttribute("style","position:absolute;top:0;bottom:0;left:0;right:0;display:none");b.id="uglipop_overlay";b.setAttribute("style","position:fixed;top:0;bottom:0;left:0;right:0;opacity:0.3;width:100%;height:100%;background-color:black;");d.appendChild(b);e.appendChild(c);a.body.appendChild(d);a.body.appendChild(e);a.getElementById("uglipop_overlay_wrapper").style.display="none";a.getElementById("uglipop_overlay").style.display="none";a.getElementById("uglipop_content_fixed").style.display="none";d.addEventListener("click",h);g(f,"keydown",function(a){27==a.keyCode&&h()});f.uglipop=k})})(window,document);
+			var ezRBA = (function() {
+			  function init() {
+				var reportAdsBtns = document.querySelectorAll('.ez-report-ad-button');
+				for (var i = 0; i < reportAdsBtns.length; i++) {
+				  reportAdsBtns[i].addEventListener('click', function(e) {
+					var url = '<iframe src="https://ezoic.com/pub/reportads/reportads.html' + e.target.getAttribute('name') + '" width="400" height="500" style="border-radius: 10px; box-shadow: 2px 2px 30px 6px rgba(0,0,0,0.75); border: 1px solid black;"></iframe>'
+					uglipop({
+					  class: 'none',
+					  source: 'html',
+					  content: url,
+					});
+				  });
+				}
+				function bindEvent(element, eventName, eventHandler) {
+					if (element.addEventListener) {
+						element.addEventListener(eventName, eventHandler, false);
+					} else if (element.attachEvent) {
+						element.attachEvent('on' + eventName, eventHandler);
+					}
+				}
+				bindEvent(window, 'message', function(e) {
+					if (e.data === 'close-report-ad-modal') {
+						document.getElementById('uglipop_overlay_wrapper').style.display = 'none';	
+						document.getElementById('uglipop_overlay').style.display = 'none';	
+						document.getElementById('uglipop_content_fixed').style.display = 'none';	
+					}
+				})
+			  }
+
+			  return {
+				init: init
+			  };
+			})();
+			ezRBA.init();
+		</script>
+<script type='text/javascript' data-cfasync='false'></script>
+<script type="text/javascript" style='display:none;'>var __ez_dims = (function() {
+		var setCookie = function( name, content, expiry ) {
+			return document.cookie = name+'='+content+((expiry)?';expires='+(new Date(Math.floor(new Date().getTime()+expiry*1000)).toUTCString()):'')+';path=/';
+		};
+		var ffid = 1;
+		var oh = window.screen.height;
+		var ow = window.screen.width;
+		var h = ffid === 1 ? oh : (oh > ow) ? oh : ow;
+		var w = ffid === 1 ? ow : (oh > ow) ? ow : oh;
+		var uh = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight;
+		var uw = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth;
+		setCookie('ezds', encodeURIComponent('ffid='+ffid+',w='+w+',h='+h), (31536e3*7));
+		setCookie('ezohw', encodeURIComponent('w='+uw+',h='+uh), (31536e3*7));
+	})();</script><script type='text/javascript' style='display:none;' async>
+__ez.queue.addFile('edmonton.php', '/detroitchicago/edmonton.webp?a=a&cb=191-1&shcb=34', true, ['/detroitchicago/minneapolis.js'], true, false, false, false);
+__ez.queue.addFile('jellyfish.php', '/porpoiseant/jellyfish.webp?a=a&cb=191-1&shcb=34', false, [], true, false, false, false);
+</script>
+
+<script>var _audins_dom="philpad_com",_audins_did=3788;__ez.queue.addDelayFunc("audins.js","__ez.script.add", "//go.ezoic.net/detroitchicago/audins.js?cb=191-1");</script><noscript><div style="display:none;"><img src="//pixel.quantserve.com/pixel/p-31iz6hfFutd16.gif?labels=Domain.philpad_com,DomainId.3788" border="0" height="1" width="1" alt="Quantcast"/></div></noscript><noscript><img src="https://sb.scorecardresearch.com/p?c1=2&c2=20015427&cv=2.0&cj=1"/></noscript></body></html><!--[selectron:done]-->
